@@ -1,0 +1,1051 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\newcommand{\classname}{enStyle}
+
+
+%----------------------------------------------------------------------------------------
+%	REQUIRED PACKAGES
+%----------------------------------------------------------------------------------------
+
+\usepackage{ifthen}
+
+\usepackage{babel} % Required for automatically changing names of document elements to languages besides english
+
+\usepackage{scrbase} % Required for handling language-dependent names of sections/document elements
+
+\usepackage{scrhack} % Loads fixes for various packages
+
+\usepackage{setspace} % Required for changing line spacing
+
+\usepackage{longtable} % Required for tables that span multiple pages (used in the symbols, abbreviations and physical constants pages)
+
+\usepackage{siunitx} % Required for \SI commands
+
+\usepackage{graphicx} % Required to include images
+\graphicspath{{.}}
+
+\usepackage[dvipsnames]{xcolor} % Required for extra color names
+
+\usepackage{booktabs} % Required for better table rules
+
+\usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
+
+
+%\RequirePackage[utf8]{inputenc} % Required for inputting portuguese characters
+%\RequirePackage[T1]{fontenc} % Output font encoding for portuguese characters
+
+
+%----------------------------------------------------------------------------------------
+%	CLASS OPTIONS
+%----------------------------------------------------------------------------------------
+\usepackage{parskip} % If the parskip option is passed to the class, require the parskip package 
+
+\patchcmd{\@makechapterhead}{\vspace*{50\p@}}{\abovechapterspace}{}{}
+\patchcmd{\@makeschapterhead}{\vspace*{50\p@}}{\abovechapterspace}{}{}
+\newcommand{\abovechapterspace}{\vspace*{50pt}}
+
+
+% Addchap provides unnumbered chapters with an entry in the table of contents as well as an updated header
+\ProvideDocumentCommand{\addchap}{ s o m }{%
+	\chapter*{#3}%
+	\markboth{}{}%
+	\IfBooleanTF{#1}{%
+	}{%
+		\IfNoValueTF{#2}{%
+			\addchaptertocentry{#3}%
+			\markboth{\MakeMarkcase{#3}}{\MakeMarkcase{#3}}%
+		}{%
+			\addchaptertocentry{#2}%
+			\markboth{\MakeMarkcase{#2}}{\MakeMarkcase{#2}}%
+		}%
+	}%
+}%
+
+\ProvideDocumentCommand{\addsec}{ s o m }{%
+	\section*{#3}%
+	\markright{}%
+	\IfBooleanTF{#1}{%
+	}{%
+		\IfNoValueTF{#2}{%
+			\addcontentsline{toc}{section}{#3}%
+			\markright{\MakeMarkcase{#3}}%%
+		}{%
+			\addcontentsline{toc}{section}{#2}%
+			\markright{\MakeMarkcase{#2}}%
+		}%
+	}%
+}%
+
+%----------------------------------------------------------------------------------------
+%	PENALTIES
+%----------------------------------------------------------------------------------------
+
+\doublehyphendemerits=10000 % No consecutive line hyphens
+\brokenpenalty=10000 % No broken words across columns/pages
+\widowpenalty=9999 % Almost no widows at bottom of page
+\clubpenalty=9999 % Almost no orphans at top of page
+\interfootnotelinepenalty=9999 % Almost never break footnotes
+
+%----------------------------------------------------------------------------------------
+%	PARAGRAPHS
+%----------------------------------------------------------------------------------------
+\usepackage{indentfirst} % Comment caso não queira que o 1º paragrafo fique adiantado 
+
+%----------------------------------------------------------------------------------------
+%	HEADERS AND FOOTERS
+%----------------------------------------------------------------------------------------
+
+\usepackage[markcase=used]{scrlayer-scrpage}
+\providepairofpagestyles{thesisSimple}{%
+\clearpairofpagestyles%
+\automark[chapter]{chapter}
+\ihead{\headmark}% Inner header
+\ofoot[\pagemark]{\pagemark}% Outer footer %serve para mudar onde se encontra o numero da página no rosto de cada pagina.
+}
+\ohead{}% Outer header
+\ifoot{}% Inner footer
+
+\pagestyle{thesisSimple}
+\providepairofpagestyles[thesisSimple]{thesis}{%
+\automark*[section]{}%
+}
+\providepairofpagestyles[thesisSimple]{review}{%
+	\ofoot[\ttitle/\authorname]{\ttitle/\authorname}
+	\ifoot[\today]{\today}
+}
+\pagestyle{thesis}
+\KOMAoption{headsepline}{true}{}
+\PreventPackageFromLoading[\ClassError{\classname}{Package `fancyhdr' is
+incompatible\MessageBreak with this class}{The pagesyles are defined 
+using package `scrlayer-scrpage', please consult the\MessageBreak 
+KOMA-script documentation for details.}]{fancyhdr}
+
+
+\newcommand{\blank@p@gestyle}{empty}
+\newcommand{\blankpagestyle}[1]{\def\blank@p@gestyle{#1}}
+
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+\hbox{}
+\thispagestyle{\blank@p@gestyle}
+\newpage
+\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+
+\newcommand{\checktoopen}{% New command to move content to the next page which prints to the next odd page if twosided mode is active  
+\if@openright\cleardoublepage\else\clearpage\fi
+}
+
+\newcommand\bhrule{\typeout{--------------------}}
+\newcommand\tttypeout[1]{\bhrule\typeout{\space #1}\bhrule}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % New command to make the lines in the title page
+\newcommand{\decoRule}{\rule{.8\textwidth}{.4pt}} % New command for a rule to be used under figures
+
+\renewcommand{\abovechapterspace}{\vspace*{10pt}} % Reduce the whitespace above a chapter heading
+
+\setcounter{tocdepth}{3} % The depth to which the document sections are printed to the table of contents
+\providecommand\addchaptertocentry[1]{%
+\ifdef{\phantomsection}{\phantomsection}{}% The \phantomsection command is necessary for hyperref to jump to the correct page
+\addcontentsline{toc}{chapter}{#1}%
+}
+
+%----------------------------------------------------------------------------------------
+%	DEFINE CUSTOM THESIS INFORMATION COMMANDS
+%----------------------------------------------------------------------------------------
+
+\def\authorname{}
+\def\ttitle{}
+\newcommand*{\supervisor}[1]{\def\supname{#1}}
+\newcommand*{\cosupervisor}[1]{\def\cosupname{#1}}
+\newcommand*{\thesistitle}[1]{\def\@title{#1}\def\ttitle{#1}}
+\newcommand*{\thesissubtitle}[1]{\def\tsubtitle{#1}}
+\newcommand*{\subjectarea}[1]{\def\subjectname{#1}}
+\newcommand*{\committeepresident}[1]{\def\presidentname{#1}}
+\newcommand*{\committeemembers}[1]{\def\committee{#1}}
+\newcommand*{\thesisdate}[1]{\def\tdate{#1}}
+\renewcommand*{\author}[1]{\def\authorname{#1}}
+\newcommand*{\university}[1]{\def\univname{#1}}
+\newcommand*{\department}[1]{\def\deptname{#1}}
+\newcommand*{\keywords}[1]{\def\keywordnames{#1}}
+
+%----------------------------------------------------------------------------------------
+%	TOC BABEL CORRECTIONS - PORTUGAL
+%----------------------------------------------------------------------------------------
+
+\addto\captionsportuguese{%
+  \def\contentsname{Índice}%
+  \def\indexname{Índice Remissivo}%
+  \def\lstlistlistingname{Listagens}%
+  \def\lstlistingname{Listagem}%
+  \defineshorthand{"-}{\babelhyphen{repeat}}% generates a hyphen that will repeat on a new line
+  \gdef\annexname{Anexo}
+  \gdef\annexnamepl{Anexos}
+  \gdef\appendixnamepl{Apêndices}
+}
+
+\addto\captionsenglish{%
+  \def\lstlistlistingname{Listings}%
+  \def\lstlistingname{Listing}%
+  \gdef\annexname{Annex}
+  \gdef\annexnamepl{Annexes}
+  \gdef\appendixnamepl{Appendices}
+}
+
+\renewcommand{\@pnumwidth}{2em} % Corrigir espaço para páginas com numeração romana na ToC
+
+\usepackage{etoolbox}
+\usepackage{appendix}
+
+\newcommand{\appendixfile}[1]{%
+	\listgadd{\enStyle@appendix@list}{#1}%
+}
+
+\newcommand{\enStyle@printappendix}[1]{%
+	\InputIfFileExists{appendices/#1}{\cleardoublepage}{}%
+}
+
+\newcommand{\printappendixes}{%
+	\ifthenelse{\isundefined\enStyle@appendix@list}{}%
+		{\renewcommand{\appendixtocname}{\appendixnamepl}%
+         \cleardoublepage\appendix\addappheadtotoc%
+		 \forlistloop{\enStyle@printappendix}{\enStyle@appendix@list}}%
+} 
+
+
+\newcommand{\annexfile}[1]{%
+	\listgadd{\enStyle@annex@list}{#1}%
+}
+
+\newcommand{\enStyle@printannex}[1]{%
+	\InputIfFileExists{annexes/#1}{\cleardoublepage}{}%
+}
+
+\newcommand{\printannexes}{%
+	\ifthenelse{\isundefined\enStyle@annex@list}{}%
+		{\renewcommand{\appendixtocname}{\annexnamepl}%
+         \cleardoublepage\annex\addappheadtotoc%
+		 \forlistloop{\enStyle@printannex}{\enStyle@annex@list}}%
+} 
+
+\newcommand{\annex}{
+  \xdef\Hy@chapapp{annex}%
+  \setcounter{chapter}{0}%
+  \setcounter{section}{0}%
+  \gdef\@chapapp{\annexname}%
+  \gdef\thechapter{\@Roman\c@chapter}%
+}
+
+
+%----------------------------------------------------------------------------------------
+%	EPIGRAPH PAGE DESIGN
+%----------------------------------------------------------------------------------------
+\newcommand{\epigraphlabel}{Epigraph}
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\epigraphlabel}{Epigraph}
+\providecaptionname{portuguese}{\epigraphlabel}{Ep\'igrafe} % Portuguese 
+\newenvironment{epigraph}{
+	\checktoopen
+	\tttypeout{\epigraphlabel}
+	\thispagestyle{plain}
+	%\chapter*{\epigraphlabel} %Mostra o título Epígrafe
+}
+{
+  \vfil\vfil\vfil\null%
+}
+
+
+%----------------------------------------------------------------------------------------
+%	DEDICATION PAGE DESIGN
+%----------------------------------------------------------------------------------------
+
+\newcommand{\dedicationlabel}{Dedicatory}
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\dedicationlabel}{Dedicatory}
+\providecaptionname{portuguese}{\dedicationlabel}{Dedicat\'oria} % Portuguese 
+\newenvironment{dedicatory}{
+	\checktoopen
+	\tttypeout{\dedicationlabel}
+	\thispagestyle{plain}
+	%\chapter*{\dedicationlabel} %Mostra o título dedicatória
+}
+{
+  \vfil\vfil\vfil\null
+}
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT PAGE DESIGN
+%----------------------------------------------------------------------------------------
+
+\newcommand{\abslabel}{Abstract}
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\abslabel}{Abstract}
+\providecaptionname{portuguese}{\abslabel}{Resumo} % Portuguese 
+\newcommand{\keywordslabel}{Keywords}
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\keywordslabel}{Keywords}
+\providecaptionname{portuguese}{\keywordslabel}{Palavras-chave} % Portuguese 
+\newenvironment{abstract}{
+	\checktoopen
+	\tttypeout{\abstractname}
+	%\addchaptertocentry{\abstractname} % Add the abstract to the table of contents
+	\thispagestyle{plain}
+	\chapter*{\abslabel}	
+}
+{
+  \bigskip
+  {\noindent \bf \keywordslabel:} {\keywordnames}
+  \vfil\vfil\vfil\null
+}
+
+\newcommand{\abslabelotherlang}{Resumo}
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\abslabelotherlang}{Resumo}
+\providecaptionname{portuguese}{\abslabelotherlang}{Abstract}  
+\newenvironment{abstractotherlanguage}{
+	\checktoopen
+	\tttypeout{\abslabel}
+	%\addchaptertocentry{\abslabelotherlang} % Add the abstract to the table of contents	
+	\thispagestyle{plain}
+	\chapter*{\abslabelotherlang}
+}
+{
+  \vfil\vfil\vfil\null
+}
+
+
+%----------------------------------------------------------------------------------------
+%	ACKNOWLEDGEMENT PAGE DESIGN
+%----------------------------------------------------------------------------------------
+
+\newcommand{\acknowledgementlabel}{Acknowledgement}
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish} {\acknowledgementlabel}{Acknowledgement} % Acknowledgement text for English countries
+\providecaptionname{portuguese} {\acknowledgementlabel}{Agradecimentos}
+\newenvironment{acknowledgements}{
+	%\addchaptertocentry{\acknowledgementlabel} % Add the acknowledgements to the table of contents
+	\tttypeout{\acknowledgementlabel}
+	\null\vfil
+	\thispagestyle{plain}
+	\chapter*{\acknowledgementlabel}
+}
+{
+  \vfil\vfil\vfil\null
+}
+\end_preamble
+\options portuguese
+\use_default_options false
+\maintain_unincluded_children false
+\language portuguese
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format pdf2
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 3cm
+\rightmargin 3cm
+\bottommargin 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 1.5cm
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\align center
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\series bold
+\size largest
+Modelo de Dissertação de Mestrado da Escola Naval - LYX
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size large
+Preenche as seguintes linhas de código baixo indicadas.
+ Terás as notas a amarelo para te ajudarem.
+\end_layout
+
+\begin_layout Plain Layout
+
+\size large
+Não deves apagar nem editar qualquer código.
+\end_layout
+
+\begin_layout Plain Layout
+
+\size large
+Exempo:
+\end_layout
+
+\begin_layout Plain Layout
+
+\size large
+
+\backslash
+thesistitle{Título da Dissertação de Mestrado} ——————- 
+\backslash
+thesistitle{Modelo de Previsão de degelo das calotes polares}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thesistitle{Título da Dissertação de Mestrado}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Escreva o título da tese, pode referenciar o titulo ao longa da dissertação
+ utilizando o comando (
+\backslash
+ttitle)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thesissubtitle{Subtítulo da Dissertação de Mestrado}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Escreva o subtítulo da tese, pode referenciar o titulo ao longa da dissertação
+ utilizando o comando (
+\backslash
+subttitle)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+author{Nome do 
+\backslash
+textsc{Orientando}}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Escreva o seu nome, pode referenciar o autor ao longa da dissertação utilizando
+ o comando (
+\backslash
+authorname)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subjectarea{Engenharia Naval Ramo de Armas e Eletrónica}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Identifique a sua especialidade: Engenharia Naval Ramo de Armas e Eletrónica,
+ Engenharia Naval Ramo de Mecânica, Marinha, Fuzileiros, Marinha e Administração
+ Naval
+\end_layout
+
+\begin_layout Plain Layout
+Poderá referenciar-lo ao longo do seu trabalho com o comando (
+\backslash
+areaname)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+supervisor{Nome do 
+\backslash
+textsc{Orientador}}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+O nome do seu supervisor, isto é usado na página da contra capa, poderá
+ referenciar-lo ao longo do seu trabalho com o comando (
+\backslash
+supname)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+cosupervisor{Dr.
+ Jack 
+\backslash
+textsc{Smith}}}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Caso tenha co-orientador, retire o símbolo 
+\begin_inset Quotes fld
+\end_inset
+
+%
+\begin_inset Quotes frd
+\end_inset
+
+ e escreva o nome dele.
+ Isto é usado na página da contra capa, poderá referenciar-lo ao longo do
+ seu trabalho com o comando (
+\backslash
+cosupname)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+university{
+\backslash
+href{https://escolanaval.marinha.pt}{Escola Naval}}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Nome da universidade e endereço web, , e poderá referenciar-la ao longo
+ do seu trabalho com o comando 
+\backslash
+univname
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+department{
+\backslash
+href{http://department.university.com}{Departamento Ciência e Tecnologias}}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Nome do departamento e endereço web, e poderá referenciar-la ao longo do
+ seu trabalho com o comando 
+\backslash
+deptname % Classes e respetivos departamentos: % EN-AEL E EN-MEC - Departamento
+ Ciência e Tecnologias % AN - Departamento de Humanidades e Gestão % M -
+ Departamento de Ciências do Mar % FZ - Departamento de Ciências do Mar
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thesisdate{Escola Naval, 
+\backslash
+today}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+data da impressão da tese, pode referenciar a data ao longa da dissertação
+ utilizando o comando (
+\backslash
+tdate)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\series bold
+\size largest
+Início do Documento
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+frontmatter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagestyle{plain}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "frontmatter/frontmatter.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList table
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%Main document starts here
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+mainmatter
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagestyle{thesis}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
+Aqui irá inserir os diversos capítulos do seu documento.
+\end_layout
+
+\begin_layout Itemize
+Se quiser criar mais do que 3 capítulos, copie a pasta de ch1 e cola na
+ raiz de chapters, seguidamente altere o nome do capítulo e da pasta.
+\end_layout
+
+\begin_layout Itemize
+Depois basta inserir aqui o documento.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "chapters/ch1/ch1.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "chapters/ch2/ch2.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "chapters/ch3/ch3.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Bibilografia.
+\end_layout
+
+\begin_layout Plain Layout
+Deverá...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "mainbibliography"
+options "plain"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Apêndices e dos Anexos
+\end_layout
+
+\begin_layout Plain Layout
+Não altere nem elimine nenhuma destas linhas de código.
+\end_layout
+
+\begin_layout Plain Layout
+Se não quiser colocar anexo ou apendice elimine apenas a linha onde aparece
+ include.
+ appendix1.lyx ou include: annex1.lyx
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+appendixfile{appendix1}%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+printappendixes 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "appendices/appendix1.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+annexfile{annex1}%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+printannexes
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "annexes/annex1.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

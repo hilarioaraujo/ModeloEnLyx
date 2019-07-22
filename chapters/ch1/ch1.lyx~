@@ -1,0 +1,798 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\use_default_options false
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language portuguese
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Estrutura da Dissertação de Mestrado
+\end_layout
+
+\begin_layout Standard
+Esta vai ser a minha introdução coisa:
+\end_layout
+
+\begin_layout Section
+Introdução
+\end_layout
+
+\begin_layout Standard
+A introdução prepara o leitor para uma leitura organizada e uma melhor compreens
+ão do trabalho científico que se está a apresentar.
+ Deve por isso começar por apresentar, de forma breve, a problemática em
+ que se insere o trabalho científico.
+ Sempre que for necessário fazer este enquadramento de forma detalhada e
+ mais longa, deve apenas referir-se o assunto na introdução indicando que
+ a apresentação mais detalhada será feita num dos primeiros capítulos (normalmen
+te o primeiro).
+\end_layout
+
+\begin_layout Standard
+Feita, contudo, esta apresentação do assunto, expondo a problemática subjacente
+ ao mesmo, deve apresentar-se o problema, ou problemas, objeto do estudo
+ efetuado, a que se segue uma explicação das vias seguidas na investigação
+ e da forma como elas transparecem na estrutura adotada para a apresentação.
+ Seguem-se, se forem relevantes e necessárias, algumas explicações sobre
+ a metodologia do trabalho, terminando com os objetivos que se pretende
+ alcançar.
+ Sempre que for necessário, para uma melhor compreensão por parte do leitor,
+ pode dividir-se a introdução em pequenos subcapítulos, indicando objetivos,
+ vias seguidas na investigação, metodologias e resultados pretendidos.
+\end_layout
+
+\begin_layout Standard
+Este capítulo não tem numeração específica e deve iniciar-se ao cimo de
+ uma página ímpar (à direita), independentemente do facto da página anterior
+ ser deixada com verso em branco.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Reference1"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ddddd
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+bcfg
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Capítulos
+\end_layout
+
+\begin_layout Standard
+Segue-se o corpo principal do trabalho, dividido em capítulos, numerados
+ em numeração árabe (1, 2, 3,...), que podem subdividir-se em subcapítulos,
+ sucessivamente, igualmente numerados segundo a lógica
+\end_layout
+
+\begin_layout Standard
+1.
+ Capítulo 
+\end_layout
+
+\begin_layout Standard
+1.1 Subcapítulo 
+\end_layout
+
+\begin_layout Standard
+1.1.1 Sub-subcapítulo 
+\end_layout
+
+\begin_layout Standard
+etc...
+\end_layout
+
+\begin_layout Standard
+Aos capítulos e subcapítulos devem ser dados títulos, em letra destacada
+ em negrito, de corpo sucessivamente 14, 13 e 12, sempre encostados à margem
+ esquerda da página sem qualquer avanço.
+\end_layout
+
+\begin_layout Standard
+Não é possível apresentar um critério único para o ordenamento de capítulos
+ e subcapítulos, decorrendo esta estrutura da natureza do próprio trabalho,
+ variando consoante a área disciplinar ou científica do mesmo e das suas
+ características próprias.
+\backslash
+
+\backslash
+ Nalguns casos terá uma natureza explicativa, noutros passará pela exposição
+ de resultados e sua interpretação, envolvendo a apresentação de critérios,
+ tabelas de resultados, memória descritiva, etc.
+\end_layout
+
+\begin_layout Standard
+Cada um dos capítulos deve começar ao cimo de uma página ímpar (à direita).
+\end_layout
+
+\begin_layout Section
+Conclusão
+\end_layout
+
+\begin_layout Standard
+A conclusão segue-se ao corpo principal dos capítulos que constituem o trabalho,
+ realçando, de forma resumida e nos aspetos mais relevantes, os passos seguidos
+ e os resultados obtidos (mas evitando fazer um resumo que repita aspetos
+ do corpo).
+ Devem expor-se as dificuldades e limitações sentidas, sobretudo se as mesmas
+ limitaram a investigação e prejudicaram o alcançar dos resultados propostos
+ na introdução.
+ E, de igual modo, se a investigação desenvolvida mostrou novas vias de
+ trabalho que não puderam ser desenvolvidas, devem evidenciar-se os caminhos
+ que foram abertos, avançando com sugestões e propostas para trabalhos futuros
+ que deem continuidade ao projeto presente.
+\end_layout
+
+\begin_layout Standard
+Este capítulo não deve ser numerado, devendo começar ao início de uma página
+ Ímpar (à direita), mesmo que a página anterior se encontre em branco.
+\end_layout
+
+\begin_layout Section
+Introdução
+\end_layout
+
+\begin_layout Standard
+A introdução prepara o leitor para uma leitura organizada e uma melhor compreens
+ão do trabalho científico que se está a apresentar.
+ Deve por isso começar por apresentar, de forma breve, a problemática em
+ que se insere o trabalho científico.
+ Sempre que for necessário fazer este enquadramento de forma detalhada e
+ mais longa, deve apenas referir-se o assunto na introdução indicando que
+ a apresentação mais detalhada será feita num dos primeiros capítulos (normalmen
+te o primeiro).
+\end_layout
+
+\begin_layout Standard
+Feita, contudo, esta apresentação do assunto, expondo a problemática subjacente
+ ao mesmo, deve apresentar-se o problema, ou problemas, objeto do estudo
+ efetuado, a que se segue uma explicação das vias seguidas na investigação
+ e da forma como elas transparecem na estrutura adotada para a apresentação.
+ Seguem-se, se forem relevantes e necessárias, algumas explicações sobre
+ a metodologia do trabalho, terminando com os objetivos que se pretende
+ alcançar.
+ Sempre que for necessário, para uma melhor compreensão por parte do leitor,
+ pode dividir-se a introdução em pequenos subcapítulos, indicando objetivos,
+ vias seguidas na investigação, metodologias e resultados pretendidos.
+\end_layout
+
+\begin_layout Standard
+Este capítulo não tem numeração específica e deve iniciar-se ao cimo de
+ uma página ímpar (à direita), independentemente do facto da página anterior
+ ser deixada com verso em branco.
+\end_layout
+
+\begin_layout Section
+Introdução
+\end_layout
+
+\begin_layout Standard
+A introdução prepara o leitor para uma leitura organizada e uma melhor compreens
+ão do trabalho científico que se está a apresentar.
+ Deve por isso começar por apresentar, de forma breve, a problemática em
+ que se insere o trabalho científico.
+ Sempre que for necessário fazer este enquadramento de forma detalhada e
+ mais longa, deve apenas referir-se o assunto na introdução indicando que
+ a apresentação mais detalhada será feita num dos primeiros capítulos (normalmen
+te o primeiro).
+\end_layout
+
+\begin_layout Standard
+Feita, contudo, esta apresentação do assunto, expondo a problemática subjacente
+ ao mesmo, deve apresentar-se o problema, ou problemas, objeto do estudo
+ efetuado, a que se segue uma explicação das vias seguidas na investigação
+ e da forma como elas transparecem na estrutura adotada para a apresentação.
+ Seguem-se, se forem relevantes e necessárias, algumas explicações sobre
+ a metodologia do trabalho, terminando com os objetivos que se pretende
+ alcançar.
+ Sempre que for necessário, para uma melhor compreensão por parte do leitor,
+ pode dividir-se a introdução em pequenos subcapítulos, indicando objetivos,
+ vias seguidas na investigação, metodologias e resultados pretendidos.
+\end_layout
+
+\begin_layout Standard
+Este capítulo não tem numeração específica e deve iniciar-se ao cimo de
+ uma página ímpar (à direita), independentemente do facto da página anterior
+ ser deixada com verso em branco.
+\end_layout
+
+\begin_layout Section
+Introdução
+\end_layout
+
+\begin_layout Standard
+A introdução prepara o leitor para uma leitura organizada e uma melhor compreens
+ão do trabalho científico que se está a apresentar.
+ Deve por isso começar por apresentar, de forma breve, a problemática em
+ que se insere o trabalho científico.
+ Sempre que for necessário fazer este enquadramento de forma detalhada e
+ mais longa, deve apenas referir-se o assunto na introdução indicando que
+ a apresentação mais detalhada será feita num dos primeiros capítulos (normalmen
+te o primeiro).
+\end_layout
+
+\begin_layout Standard
+Feita, contudo, esta apresentação do assunto, expondo a problemática subjacente
+ ao mesmo, deve apresentar-se o problema, ou problemas, objeto do estudo
+ efetuado, a que se segue uma explicação das vias seguidas na investigação
+ e da forma como elas transparecem na estrutura adotada para a apresentação.
+ Seguem-se, se forem relevantes e necessárias, algumas explicações sobre
+ a metodologia do trabalho, terminando com os objetivos que se pretende
+ alcançar.
+ Sempre que for necessário, para uma melhor compreensão por parte do leitor,
+ pode dividir-se a introdução em pequenos subcapítulos, indicando objetivos,
+ vias seguidas na investigação, metodologias e resultados pretendidos.
+\end_layout
+
+\begin_layout Standard
+Este capítulo não tem numeração específica e deve iniciar-se ao cimo de
+ uma página ímpar (à direita), independentemente do facto da página anterior
+ ser deixada com verso em branco.
+\end_layout
+
+\begin_layout Standard
+A introdução prepara o leitor para uma leitura organizada e uma melhor compreens
+ão do trabalho científico que se está a apresentar.
+ Deve por isso começar por apresentar, de forma breve, a problemática em
+ que se insere o trabalho científico.
+ Sempre que for necessário fazer este enquadramento de forma detalhada e
+ mais longa, deve apenas referir-se o assunto na introdução indicando que
+ a apresentação mais detalhada será feita num dos primeiros capítulos (normalmen
+te o primeiro).
+\end_layout
+
+\begin_layout Standard
+Feita, contudo, esta apresentação do assunto, expondo a problemática subjacente
+ ao mesmo, deve apresentar-se o problema, ou problemas, objeto do estudo
+ efetuado, a que se segue uma explicação das vias seguidas na investigação
+ e da forma como elas transparecem na estrutura adotada para a apresentação.
+ Seguem-se, se forem relevantes e necessárias, algumas explicações sobre
+ a metodologia do trabalho, terminando com os objetivos que se pretende
+ alcançar.
+ Sempre que for necessário, para uma melhor compreensão por parte do leitor,
+ pode dividir-se a introdução em pequenos subcapítulos, indicando objetivos,
+ vias seguidas na investigação, metodologias e resultados pretendidos.
+\end_layout
+
+\begin_layout Standard
+Este capítulo não tem numeração específica e deve iniciar-se ao cimo de
+ uma página ímpar (à direita), independentemente do facto da página anterior
+ ser deixada com verso em branco.
+\end_layout
+
+\begin_layout Standard
+A introdução prepara o leitor para uma leitura organizada e uma melhor compreens
+ão do trabalho científico que se está a apresentar.
+ Deve por isso começar por apresentar, de forma breve, a problemática em
+ que se insere o trabalho científico.
+ Sempre que for necessário fazer este enquadramento de forma detalhada e
+ mais longa, deve apenas referir-se o assunto na introdução indicando que
+ a apresentação mais detalhada será feita num dos primeiros capítulos (normalmen
+te o primeiro).
+\end_layout
+
+\begin_layout Standard
+Feita, contudo, esta apresentação do assunto, expondo a problemática subjacente
+ ao mesmo, deve apresentar-se o problema, ou problemas, objeto do estudo
+ efetuado, a que se segue uma explicação das vias seguidas na investigação
+ e da forma como elas transparecem na estrutura adotada para a apresentação.
+ Seguem-se, se forem relevantes e necessárias, algumas explicações sobre
+ a metodologia do trabalho, terminando com os objetivos que se pretende
+ alcançar.
+ Sempre que for necessário, para uma melhor compreensão por parte do leitor,
+ pode dividir-se a introdução em pequenos subcapítulos, indicando objetivos,
+ vias seguidas na investigação, metodologias e resultados pretendidos.
+\end_layout
+
+\begin_layout Standard
+Este capítulo não tem numeração específica e deve iniciar-se ao cimo de
+ uma página ímpar (à direita), independentemente do facto da página anterior
+ ser deixada com verso em branco.
+\end_layout
+
+\begin_layout Standard
+A introdução prepara o leitor para uma leitura organizada e uma melhor compreens
+ão do trabalho científico que se está a apresentar.
+ Deve por isso começar por apresentar, de forma breve, a problemática em
+ que se insere o trabalho científico.
+ Sempre que for necessário fazer este enquadramento de forma detalhada e
+ mais longa, deve apenas referir-se o assunto na introdução indicando que
+ a apresentação mais detalhada será feita num dos primeiros capítulos (normalmen
+te o primeiro).
+\end_layout
+
+\begin_layout Standard
+Feita, contudo, esta apresentação do assunto, expondo a problemática subjacente
+ ao mesmo, deve apresentar-se o problema, ou problemas, objeto do estudo
+ efetuado, a que se segue uma explicação das vias seguidas na investigação
+ e da forma como elas transparecem na estrutura adotada para a apresentação.
+ Seguem-se, se forem relevantes e necessárias, algumas explicações sobre
+ a metodologia do trabalho, terminando com os objetivos que se pretende
+ alcançar.
+ Sempre que for necessário, para uma melhor compreensão por parte do leitor,
+ pode dividir-se a introdução em pequenos subcapítulos, indicando objetivos,
+ vias seguidas na investigação, metodologias e resultados pretendidos.
+\end_layout
+
+\begin_layout Standard
+Este capítulo não tem numeração específica e deve iniciar-se ao cimo de
+ uma página ímpar (à direita), independentemente do facto da página anterior
+ ser deixada com verso em branco.
+\end_layout
+
+\begin_layout Standard
+A introdução prepara o leitor para uma leitura organizada e uma melhor compreens
+ão do trabalho científico que se está a apresentar.
+ Deve por isso começar por apresentar, de forma breve, a problemática em
+ que se insere o trabalho científico.
+ Sempre que for necessário fazer este enquadramento de forma detalhada e
+ mais longa, deve apenas referir-se o assunto na introdução indicando que
+ a apresentação mais detalhada será feita num dos primeiros capítulos (normalmen
+te o primeiro).
+\end_layout
+
+\begin_layout Standard
+Feita, contudo, esta apresentação do assunto, expondo a problemática subjacente
+ ao mesmo, deve apresentar-se o problema, ou problemas, objeto do estudo
+ efetuado, a que se segue uma explicação das vias seguidas na investigação
+ e da forma como elas transparecem na estrutura adotada para a apresentação.
+ Seguem-se, se forem relevantes e necessárias, algumas explicações sobre
+ a metodologia do trabalho, terminando com os objetivos que se pretende
+ alcançar.
+ Sempre que for necessário, para uma melhor compreensão por parte do leitor,
+ pode dividir-se a introdução em pequenos subcapítulos, indicando objetivos,
+ vias seguidas na investigação, metodologias e resultados pretendidos.
+\end_layout
+
+\begin_layout Standard
+Este capítulo não tem numeração específica e deve iniciar-se ao cimo de
+ uma página ímpar (à direita), independentemente do facto da página anterior
+ ser deixada com verso em branco.
+\end_layout
+
+\begin_layout Standard
+A introdução prepara o leitor para uma leitura organizada e uma melhor compreens
+ão do trabalho científico que se está a apresentar.
+ Deve por isso começar por apresentar, de forma breve, a problemática em
+ que se insere o trabalho científico.
+ Sempre que for necessário fazer este enquadramento de forma detalhada e
+ mais longa, deve apenas referir-se o assunto na introdução indicando que
+ a apresentação mais detalhada será feita num dos primeiros capítulos (normalmen
+te o primeiro).
+\end_layout
+
+\begin_layout Standard
+Feita, contudo, esta apresentação do assunto, expondo a problemática subjacente
+ ao mesmo, deve apresentar-se o problema, ou problemas, objeto do estudo
+ efetuado, a que se segue uma explicação das vias seguidas na investigação
+ e da forma como elas transparecem na estrutura adotada para a apresentação.
+ Seguem-se, se forem relevantes e necessárias, algumas explicações sobre
+ a metodologia do trabalho, terminando com os objetivos que se pretende
+ alcançar.
+ Sempre que for necessário, para uma melhor compreensão por parte do leitor,
+ pode dividir-se a introdução em pequenos subcapítulos, indicando objetivos,
+ vias seguidas na investigação, metodologias e resultados pretendidos.
+\end_layout
+
+\begin_layout Standard
+Este capítulo não tem numeração específica e deve iniciar-se ao cimo de
+ uma página ímpar (à direita), independentemente do facto da página anterior
+ ser deixada com verso em branco.
+\end_layout
+
+\begin_layout Standard
+A introdução prepara o leitor para uma leitura organizada e uma melhor compreens
+ão do trabalho científico que se está a apresentar.
+ Deve por isso começar por apresentar, de forma breve, a problemática em
+ que se insere o trabalho científico.
+ Sempre que for necessário fazer este enquadramento de forma detalhada e
+ mais longa, deve apenas referir-se o assunto na introdução indicando que
+ a apresentação mais detalhada será feita num dos primeiros capítulos (normalmen
+te o primeiro).
+\end_layout
+
+\begin_layout Standard
+Feita, contudo, esta apresentação do assunto, expondo a problemática subjacente
+ ao mesmo, deve apresentar-se o problema, ou problemas, objeto do estudo
+ efetuado, a que se segue uma explicação das vias seguidas na investigação
+ e da forma como elas transparecem na estrutura adotada para a apresentação.
+ Seguem-se, se forem relevantes e necessárias, algumas explicações sobre
+ a metodologia do trabalho, terminando com os objetivos que se pretende
+ alcançar.
+ Sempre que for necessário, para uma melhor compreensão por parte do leitor,
+ pode dividir-se a introdução em pequenos subcapítulos, indicando objetivos,
+ vias seguidas na investigação, metodologias e resultados pretendidos.
+\end_layout
+
+\begin_layout Standard
+Este capítulo não tem numeração específica e deve iniciar-se ao cimo de
+ uma página ímpar (à direita), independentemente do facto da página anterior
+ ser deixada com verso em branco.
+\end_layout
+
+\begin_layout Standard
+A introdução prepara o leitor para uma leitura organizada e uma melhor compreens
+ão do trabalho científico que se está a apresentar.
+ Deve por isso começar por apresentar, de forma breve, a problemática em
+ que se insere o trabalho científico.
+ Sempre que for necessário fazer este enquadramento de forma detalhada e
+ mais longa, deve apenas referir-se o assunto na introdução indicando que
+ a apresentação mais detalhada será feita num dos primeiros capítulos (normalmen
+te o primeiro).
+\end_layout
+
+\begin_layout Standard
+Feita, contudo, esta apresentação do assunto, expondo a problemática subjacente
+ ao mesmo, deve apresentar-se o problema, ou problemas, objeto do estudo
+ efetuado, a que se segue uma explicação das vias seguidas na investigação
+ e da forma como elas transparecem na estrutura adotada para a apresentação.
+ Seguem-se, se forem relevantes e necessárias, algumas explicações sobre
+ a metodologia do trabalho, terminando com os objetivos que se pretende
+ alcançar.
+ Sempre que for necessário, para uma melhor compreensão por parte do leitor,
+ pode dividir-se a introdução em pequenos subcapítulos, indicando objetivos,
+ vias seguidas na investigação, metodologias e resultados pretendidos.
+\end_layout
+
+\begin_layout Standard
+Este capítulo não tem numeração específica e deve iniciar-se ao cimo de
+ uma página ímpar (à direita), independentemente do facto da página anterior
+ ser deixada com verso em branco.
+\end_layout
+
+\begin_layout Standard
+A introdução prepara o leitor para uma leitura organizada e uma melhor compreens
+ão do trabalho científico que se está a apresentar.
+ Deve por isso começar por apresentar, de forma breve, a problemática em
+ que se insere o trabalho científico.
+ Sempre que for necessário fazer este enquadramento de forma detalhada e
+ mais longa, deve apenas referir-se o assunto na introdução indicando que
+ a apresentação mais detalhada será feita num dos primeiros capítulos (normalmen
+te o primeiro).
+\end_layout
+
+\begin_layout Standard
+Feita, contudo, esta apresentação do assunto, expondo a problemática subjacente
+ ao mesmo, deve apresentar-se o problema, ou problemas, objeto do estudo
+ efetuado, a que se segue uma explicação das vias seguidas na investigação
+ e da forma como elas transparecem na estrutura adotada para a apresentação.
+ Seguem-se, se forem relevantes e necessárias, algumas explicações sobre
+ a metodologia do trabalho, terminando com os objetivos que se pretende
+ alcançar.
+ Sempre que for necessário, para uma melhor compreensão por parte do leitor,
+ pode dividir-se a introdução em pequenos subcapítulos, indicando objetivos,
+ vias seguidas na investigação, metodologias e resultados pretendidos.
+\end_layout
+
+\begin_layout Standard
+Este capítulo não tem numeração específica e deve iniciar-se ao cimo de
+ uma página ímpar (à direita), independentemente do facto da página anterior
+ ser deixada com verso em branco.
+\end_layout
+
+\begin_layout Standard
+A introdução prepara o leitor para uma leitura organizada e uma melhor compreens
+ão do trabalho científico que se está a apresentar.
+ Deve por isso começar por apresentar, de forma breve, a problemática em
+ que se insere o trabalho científico.
+ Sempre que for necessário fazer este enquadramento de forma detalhada e
+ mais longa, deve apenas referir-se o assunto na introdução indicando que
+ a apresentação mais detalhada será feita num dos primeiros capítulos (normalmen
+te o primeiro).
+\end_layout
+
+\begin_layout Standard
+Feita, contudo, esta apresentação do assunto, expondo a problemática subjacente
+ ao mesmo, deve apresentar-se o problema, ou problemas, objeto do estudo
+ efetuado, a que se segue uma explicação das vias seguidas na investigação
+ e da forma como elas transparecem na estrutura adotada para a apresentação.
+ Seguem-se, se forem relevantes e necessárias, algumas explicações sobre
+ a metodologia do trabalho, terminando com os objetivos que se pretende
+ alcançar.
+ Sempre que for necessário, para uma melhor compreensão por parte do leitor,
+ pode dividir-se a introdução em pequenos subcapítulos, indicando objetivos,
+ vias seguidas na investigação, metodologias e resultados pretendidos.
+\end_layout
+
+\begin_layout Standard
+Este capítulo não tem numeração específica e deve iniciar-se ao cimo de
+ uma página ímpar (à direita), independentemente do facto da página anterior
+ ser deixada com verso em branco.
+\end_layout
+
+\begin_layout Section
+Introdução
+\end_layout
+
+\begin_layout Standard
+A introdução prepara o leitor para uma leitura organizada e uma melhor compreens
+ão do trabalho científico que se está a apresentar.
+ Deve por isso começar por apresentar, de forma breve, a problemática em
+ que se insere o trabalho científico.
+ Sempre que for necessário fazer este enquadramento de forma detalhada e
+ mais longa, deve apenas referir-se o assunto na introdução indicando que
+ a apresentação mais detalhada será feita num dos primeiros capítulos (normalmen
+te o primeiro).
+\end_layout
+
+\begin_layout Standard
+Feita, contudo, esta apresentação do assunto, expondo a problemática subjacente
+ ao mesmo, deve apresentar-se o problema, ou problemas, objeto do estudo
+ efetuado, a que se segue uma explicação das vias seguidas na investigação
+ e da forma como elas transparecem na estrutura adotada para a apresentação.
+ Seguem-se, se forem relevantes e necessárias, algumas explicações sobre
+ a metodologia do trabalho, terminando com os objetivos que se pretende
+ alcançar.
+ Sempre que for necessário, para uma melhor compreensão por parte do leitor,
+ pode dividir-se a introdução em pequenos subcapítulos, indicando objetivos,
+ vias seguidas na investigação, metodologias e resultados pretendidos.
+\end_layout
+
+\begin_layout Standard
+Este capítulo não tem numeração específica e deve iniciar-se ao cimo de
+ uma página ímpar (à direita), independentemente do facto da página anterior
+ ser deixada com verso em branco.
+\end_layout
+
+\begin_layout Section
+Introdução
+\end_layout
+
+\begin_layout Standard
+A introdução prepara o leitor para uma leitura organizada e uma melhor compreens
+ão do trabalho científico que se está a apresentar.
+ Deve por isso começar por apresentar, de forma breve, a problemática em
+ que se insere o trabalho científico.
+ Sempre que for necessário fazer este enquadramento de forma detalhada e
+ mais longa, deve apenas referir-se o assunto na introdução indicando que
+ a apresentação mais detalhada será feita num dos primeiros capítulos (normalmen
+te o primeiro).
+\end_layout
+
+\begin_layout Standard
+Feita, contudo, esta apresentação do assunto, expondo a problemática subjacente
+ ao mesmo, deve apresentar-se o problema, ou problemas, objeto do estudo
+ efetuado, a que se segue uma explicação das vias seguidas na investigação
+ e da forma como elas transparecem na estrutura adotada para a apresentação.
+ Seguem-se, se forem relevantes e necessárias, algumas explicações sobre
+ a metodologia do trabalho, terminando com os objetivos que se pretende
+ alcançar.
+ Sempre que for necessário, para uma melhor compreensão por parte do leitor,
+ pode dividir-se a introdução em pequenos subcapítulos, indicando objetivos,
+ vias seguidas na investigação, metodologias e resultados pretendidos.
+\end_layout
+
+\begin_layout Standard
+Este capítulo não tem numeração específica e deve iniciar-se ao cimo de
+ uma página ímpar (à direita), independentemente do facto da página anterior
+ ser deixada com verso em branco.
+\end_layout
+
+\begin_layout Standard
+A introdução prepara o leitor para uma leitura organizada e uma melhor compreens
+ão do trabalho científico que se está a apresentar.
+ Deve por isso começar por apresentar, de forma breve, a problemática em
+ que se insere o trabalho científico.
+ Sempre que for necessário fazer este enquadramento de forma detalhada e
+ mais longa, deve apenas referir-se o assunto na introdução indicando que
+ a apresentação mais detalhada será feita num dos primeiros capítulos (normalmen
+te o primeiro).
+\end_layout
+
+\begin_layout Standard
+Feita, contudo, esta apresentação do assunto, expondo a problemática subjacente
+ ao mesmo, deve apresentar-se o problema, ou problemas, objeto do estudo
+ efetuado, a que se segue uma explicação das vias seguidas na investigação
+ e da forma como elas transparecem na estrutura adotada para a apresentação.
+ Seguem-se, se forem relevantes e necessárias, algumas explicações sobre
+ a metodologia do trabalho, terminando com os objetivos que se pretende
+ alcançar.
+ Sempre que for necessário, para uma melhor compreensão por parte do leitor,
+ pode dividir-se a introdução em pequenos subcapítulos, indicando objetivos,
+ vias seguidas na investigação, metodologias e resultados pretendidos.
+\end_layout
+
+\begin_layout Standard
+Este capítulo não tem numeração específica e deve iniciar-se ao cimo de
+ uma página ímpar (à direita), independentemente do facto da página anterior
+ ser deixada com verso em branco.
+\end_layout
+
+\begin_layout Standard
+A introdução prepara o leitor para uma leitura organizada e uma melhor compreens
+ão do trabalho científico que se está a apresentar.
+ Deve por isso começar por apresentar, de forma breve, a problemática em
+ que se insere o trabalho científico.
+ Sempre que for necessário fazer este enquadramento de forma detalhada e
+ mais longa, deve apenas referir-se o assunto na introdução indicando que
+ a apresentação mais detalhada será feita num dos primeiros capítulos (normalmen
+te o primeiro).
+\end_layout
+
+\begin_layout Standard
+Feita, contudo, esta apresentação do assunto, expondo a problemática subjacente
+ ao mesmo, deve apresentar-se o problema, ou problemas, objeto do estudo
+ efetuado, a que se segue uma explicação das vias seguidas na investigação
+ e da forma como elas transparecem na estrutura adotada para a apresentação.
+ Seguem-se, se forem relevantes e necessárias, algumas explicações sobre
+ a metodologia do trabalho, terminando com os objetivos que se pretende
+ alcançar.
+ Sempre que for necessário, para uma melhor compreensão por parte do leitor,
+ pode dividir-se a introdução em pequenos subcapítulos, indicando objetivos,
+ vias seguidas na investigação, metodologias e resultados pretendidos.
+\end_layout
+
+\begin_layout Standard
+Este capítulo não tem numeração específica e deve iniciar-se ao cimo de
+ uma página ímpar (à direita), independentemente do facto da página anterior
+ ser deixada com verso em branco.
+\end_layout
+
+\begin_layout Standard
+A introdução prepara o leitor para uma leitura organizada e uma melhor compreens
+ão do trabalho científico que se está a apresentar.
+ Deve por isso começar por apresentar, de forma breve, a problemática em
+ que se insere o trabalho científico.
+ Sempre que for necessário fazer este enquadramento de forma detalhada e
+ mais longa, deve apenas referir-se o assunto na introdução indicando que
+ a apresentação mais detalhada será feita num dos primeiros capítulos (normalmen
+te o primeiro).
+\end_layout
+
+\begin_layout Standard
+Feita, contudo, esta apresentação do assunto, expondo a problemática subjacente
+ ao mesmo, deve apresentar-se o problema, ou problemas, objeto do estudo
+ efetuado, a que se segue uma explicação das vias seguidas na investigação
+ e da forma como elas transparecem na estrutura adotada para a apresentação.
+ Seguem-se, se forem relevantes e necessárias, algumas explicações sobre
+ a metodologia do trabalho, terminando com os objetivos que se pretende
+ alcançar.
+ Sempre que for necessário, para uma melhor compreensão por parte do leitor,
+ pode dividir-se a introdução em pequenos subcapítulos, indicando objetivos,
+ vias seguidas na investigação, metodologias e resultados pretendidos.
+\end_layout
+
+\begin_layout Standard
+Este capítulo não tem numeração específica e deve iniciar-se ao cimo de
+ uma página ímpar (à direita), independentemente do facto da página anterior
+ ser deixada com verso em branco.
+\end_layout
+
+\end_body
+\end_document
