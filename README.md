@@ -6,7 +6,6 @@ This template explains the main formatting rules to apply to a Master Dissertati
 
 **You can fork this repository to make your own dissertation based on this template.**
 
-This template is based on MastersDoctoralThesis version 1.2 by Vel (vel@latextemplates.com) and Johannes Böttcher, downloaded from [LaTeXTemplates](http://www.LaTeXTemplates.com) in November/2015. Adapted to TMDEI/ISEP style (Dec/2015) by Nuno Pereira and Paulo Baltarejo (DEI/ISEP).
 
 ## How do I get set up? ##
 
