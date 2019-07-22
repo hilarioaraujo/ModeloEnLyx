@@ -5,97 +5,6 @@
 \save_transient_properties true
 \origin unavailable
 \textclass book
-\begin_preamble
-%----------------------------------------------------------------------------------------
-%	EPIGRAPH PAGE DESIGN
-%----------------------------------------------------------------------------------------
-\newcommand{\epigraphlabel}{Epigraph}
-\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\epigraphlabel}{Epigraph}
-\providecaptionname{portuguese}{\epigraphlabel}{Ep\'igrafe} % Portuguese 
-\newenvironment{epigraph}{
-	\checktoopen
-	\tttypeout{\epigraphlabel}
-	\thispagestyle{plain}
-	%\chapter*{\epigraphlabel} %Mostra o título Epígrafe
-}
-{
-  \vfil\vfil\vfil\null%
-}
-
-
-%----------------------------------------------------------------------------------------
-%	DEDICATION PAGE DESIGN
-%----------------------------------------------------------------------------------------
-
-\newcommand{\dedicationlabel}{Dedicatory}
-\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\dedicationlabel}{Dedicatory}
-\providecaptionname{portuguese}{\dedicationlabel}{Dedicat\'oria} % Portuguese 
-\newenvironment{dedicatory}{
-	\checktoopen
-	\tttypeout{\dedicationlabel}
-	\thispagestyle{plain}
-	%\chapter*{\dedicationlabel} %Mostra o título dedicatória
-}
-{
-  \vfil\vfil\vfil\null
-}
-
-%----------------------------------------------------------------------------------------
-%	ABSTRACT PAGE DESIGN
-%----------------------------------------------------------------------------------------
-
-\newcommand{\abslabel}{Abstract}
-\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\abslabel}{Abstract}
-\providecaptionname{portuguese}{\abslabel}{Resumo} % Portuguese 
-\newcommand{\keywordslabel}{Keywords}
-\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\keywordslabel}{Keywords}
-\providecaptionname{portuguese}{\keywordslabel}{Palavras-chave} % Portuguese 
-\newenvironment{abstract}{
-	\checktoopen
-	\tttypeout{\abstractname}
-	%\addchaptertocentry{\abstractname} % Add the abstract to the table of contents
-	\thispagestyle{plain}
-	\chapter*{\abslabel}	
-}
-{
-  \bigskip
-  {\noindent \bf \keywordslabel:} {\keywordnames}
-  \vfil\vfil\vfil\null
-}
-
-\newcommand{\abslabelotherlang}{Resumo}
-\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\abslabelotherlang}{Resumo}
-\providecaptionname{portuguese}{\abslabelotherlang}{Abstract}  
-\newenvironment{abstractotherlanguage}{
-	\checktoopen
-	\tttypeout{\abslabel}
-	%\addchaptertocentry{\abslabelotherlang} % Add the abstract to the table of contents	
-	\thispagestyle{plain}
-	\chapter*{\abslabelotherlang}
-}
-{
-  \vfil\vfil\vfil\null
-}
-
-
-%----------------------------------------------------------------------------------------
-%	ACKNOWLEDGEMENT PAGE DESIGN
-%----------------------------------------------------------------------------------------
-
-\newcommand{\acknowledgementlabel}{Acknowledgement}
-\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish} {\acknowledgementlabel}{Acknowledgement} % Acknowledgement text for English countries
-\providecaptionname{portuguese} {\acknowledgementlabel}{Agradecimentos}
-\newenvironment{acknowledgements}{
-	%\addchaptertocentry{\acknowledgementlabel} % Add the acknowledgements to the table of contents
-	\tttypeout{\acknowledgementlabel}
-	\null\vfil
-	\thispagestyle{plain}
-	\chapter*{\acknowledgementlabel}
-}
-{
-  \vfil\vfil\vfil\null
-}
-\end_preamble
 \use_default_options false
 \maintain_unincluded_children false
 \language portuguese
@@ -507,6 +416,30 @@ status open
  referenciar-las ao longo do seu trabalho com o comando (
 \backslash
 keywordnames)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bigskip   {
+\backslash
+noindent 
+\backslash
+bf 
+\backslash
+keywordslabel:} {
+\backslash
+keywordnames}
 \end_layout
 
 \end_inset

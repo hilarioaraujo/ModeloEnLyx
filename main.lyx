@@ -12,6 +12,8 @@
 %----------------------------------------------------------------------------------------
 %	REQUIRED PACKAGES
 %----------------------------------------------------------------------------------------
+\usepackage{titling}
+\usepackage{eso-pic}
 
 \usepackage{etoolbox}
 \usepackage{xparse}
@@ -33,7 +35,14 @@
 \usepackage{graphicx} % Required to include images
 \graphicspath{{.}}
 
-\usepackage[dvipsnames]{xcolor} % Required for extra color names
+\usepackage{tikz} % Required for creating graphics programmatically (can be removed if not used)
+%\usetikzlibrary{arrows} % Required for fancy arrows in TiKZ graphics (can be removed if not used)
+
+\usepackage{pgfplots} % Required for drawing high--quality function plots (can be removed if not used)
+\pgfplotsset{compat=newest}
+
+
+%\usepackage[dvipsnames]{xcolor} % Required for extra color names
 
 \usepackage{booktabs} % Required for better table rules
 
@@ -101,7 +110,7 @@
 %	PARAGRAPHS
 %----------------------------------------------------------------------------------------
 \usepackage{indentfirst} % Comment caso não queira que o 1º paragrafo fique adiantado 
-
+\setlength{\parindent}{1.5cm} % distância de adiantamento do paragrafo
 \raggedbottom
 
 %----------------------------------------------------------------------------------------
@@ -205,47 +214,25 @@ KOMA-script documentation for details.}]{fancyhdr}
 
 \renewcommand{\@pnumwidth}{2em} % Corrigir espaço para páginas com numeração romana na ToC
 
-\usepackage{etoolbox}
-\usepackage{appendix}
-
-\newcommand{\appendixfile}[1]{%
-	\listgadd{\enStyle@appendix@list}{#1}%
-}
-
-\newcommand{\enStyle@printappendix}[1]{%
-	\InputIfFileExists{appendices/#1}{\cleardoublepage}{}%
-}
-
-\newcommand{\printappendixes}{%
-	\ifthenelse{\isundefined\enStyle@appendix@list}{}%
-		{\renewcommand{\appendixtocname}{\appendixnamepl}%
-         \cleardoublepage\appendix\addappheadtotoc%
-		 \forlistloop{\enStyle@printappendix}{\enStyle@appendix@list}}%
-} 
 
 
-\newcommand{\annexfile}[1]{%
-	\listgadd{\enStyle@annex@list}{#1}%
-}
+%----------------------------------------------------------------------------------------
+%	TITLEPAGE PAGE DESIGN
+%----------------------------------------------------------------------------------------
+\newcommand{\dissertationdisclamer}{A dissertation submitted in partial fulfilment of the \\ requirements for the degree of Marine Military Sciences, specialisation of}
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\dissertationdisclamer}{A dissertation submitted in partial fulfillment of \\ the requirements for the degree of Marine Military Sciences, specialisation of}
+\providecaptionname{portuguese}{\dissertationdisclamer}{Disserta\c{c}\~ao para obten\c{c}\~ao do Grau de Mestre em \\ Ciências Militares Navais, na especialidade de} % Portuguese 
 
-\newcommand{\enStyle@printannex}[1]{%
-	\InputIfFileExists{annexes/#1}{\cleardoublepage}{}%
-}
 
-\newcommand{\printannexes}{%
-	\ifthenelse{\isundefined\enStyle@annex@list}{}%
-		{\renewcommand{\appendixtocname}{\annexnamepl}%
-         \cleardoublepage\annex\addappheadtotoc%
-		 \forlistloop{\enStyle@printannex}{\enStyle@annex@list}}%
-} 
-
-\newcommand{\annex}{
-  \xdef\Hy@chapapp{annex}%
-  \setcounter{chapter}{0}%
-  \setcounter{section}{0}%
-  \gdef\@chapapp{\annexname}%
-  \gdef\thechapter{\@Roman\c@chapter}%
-}
+%----------------------------------------------------------------------------------------
+%	CONTRA - TITLEPAGE PAGE DESIGN
+%----------------------------------------------------------------------------------------
+\newcommand{\supervisorlabel}{Supervisor}
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\supervisorlabel}{Supervisor}
+\providecaptionname{portuguese}{\supervisorlabel}{Orientador}
+\newcommand{\cosupervisorlabel}{Co-Supervisor}
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\cosupervisorlabel}{Co-Supervisor}
+\providecaptionname{portuguese}{\cosupervisorlabel}{Co-Orientador}
 
 
 %----------------------------------------------------------------------------------------
@@ -336,6 +323,51 @@ KOMA-script documentation for details.}]{fancyhdr}
 {
   \vfil\vfil\vfil\null
 }
+
+%----------------------------------------------------------------------------------------
+%	APPENDICES AND ANNEX DESIGN
+%----------------------------------------------------------------------------------------
+\usepackage{etoolbox}
+\usepackage{appendix}
+
+\newcommand{\appendixfile}[1]{%
+	\listgadd{\enStyle@appendix@list}{#1}%
+}
+
+\newcommand{\enStyle@printappendix}[1]{%
+	\InputIfFileExists{appendices/#1}{\cleardoublepage}{}%
+}
+
+\newcommand{\printappendixes}{%
+	\ifthenelse{\isundefined\enStyle@appendix@list}{}%
+		{\renewcommand{\appendixtocname}{\appendixnamepl}%
+         \cleardoublepage\appendix\addappheadtotoc%
+		 \forlistloop{\enStyle@printappendix}{\enStyle@appendix@list}}%
+} 
+
+
+\newcommand{\annexfile}[1]{%
+	\listgadd{\enStyle@annex@list}{#1}%
+}
+
+\newcommand{\enStyle@printannex}[1]{%
+	\InputIfFileExists{annexes/#1}{\cleardoublepage}{}%
+}
+
+\newcommand{\printannexes}{%
+	\ifthenelse{\isundefined\enStyle@annex@list}{}%
+		{\renewcommand{\appendixtocname}{\annexnamepl}%
+         \cleardoublepage\annex\addappheadtotoc%
+		 \forlistloop{\enStyle@printannex}{\enStyle@annex@list}}%
+} 
+
+\newcommand{\annex}{
+  \xdef\Hy@chapapp{annex}%
+  \setcounter{chapter}{0}%
+  \setcounter{section}{0}%
+  \gdef\@chapapp{\annexname}%
+  \gdef\thechapter{\@Roman\c@chapter}%
+}
 \end_preamble
 \options portuguese
 \use_default_options false
@@ -413,7 +445,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 \quotes_style french
 \dynamic_quotes 0
 \papercolumns 1
-\papersides 1
+\papersides 2
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
@@ -823,6 +855,33 @@ pagestyle{plain}
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
+filename "frontmatter/titlepage.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "frontmatter/contratitlepage.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
 filename "frontmatter/frontmatter.lyx"
 
 \end_inset
@@ -995,7 +1054,7 @@ status open
 
 
 \backslash
-appendixfile{appendix1}%
+appendixfile{appendix1}
 \end_layout
 
 \begin_layout Plain Layout
@@ -1028,7 +1087,7 @@ status open
 
 
 \backslash
-annexfile{annex1}%
+annexfile{annex1}
 \end_layout
 
 \begin_layout Plain Layout
