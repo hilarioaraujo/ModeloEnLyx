@@ -82,6 +82,32 @@
 \begin_body
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\size large
+Contra Capa
+\end_layout
+
+\begin_layout Plain Layout
+Contra capa automática, terá de preencher no doc main.lyx as informações
+ referentes à sua tese e à sua pessoa.
+\end_layout
+
+\begin_layout Plain Layout
+Aqui apenas terá de, só se for necessário redefenir os espaçamentos e comentar
+ ou descomentar a as linhas da 2º box caso tenha co-orientador.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -299,160 +325,296 @@ vfill
 
 
 \backslash
-begin{minipage}{0.5
-\backslash
-textwidth}%         
+begin{tabular}{c c} 
 \end_layout
 
 \begin_layout Plain Layout
 
 	
+\backslash
+hspace{-1.5cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{minipage}{0.5
+\backslash
+textwidth}%  
+\end_layout
+
+\begin_layout Plain Layout
+
+		
 \backslash
 emph{O Aluno Mestrando,} 
 \backslash
 
 \backslash
- [2.08cm]                  
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-begin{picture}(5,20)(0,-22.5)              
-\end_layout
-
-\begin_layout Plain Layout
-
-		% 
-\backslash
-put(0,1){
-\backslash
-includegraphics[scale=0.13]{figs/assinatura-aluno.jpg}}             
+ [2.08cm]  
 \end_layout
 
 \begin_layout Plain Layout
 
 		
+\backslash
+begin{picture}(5,20)(0,-22.5)  
+\end_layout
+
+\begin_layout Plain Layout
+
+			% 
+\backslash
+put(0,1){
+\backslash
+includegraphics[scale=0.13]{figs/assinatura-aluno.jpg}}  
+\end_layout
+
+\begin_layout Plain Layout
+
+			
 \backslash
 put(0,0){
 \backslash
 rule{0.5
 \backslash
-linewidth}{0.5mm}}             
+linewidth}{0.5mm}}  	
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\backslash
+put(0,-22.5){
+\backslash
+authorname}  
 \end_layout
 
 \begin_layout Plain Layout
 
 		
 \backslash
-put(0,-22.5){
-\backslash
-authorname}         
+end{picture}  
 \end_layout
 
 \begin_layout Plain Layout
 
 	
 \backslash
-end{picture}     
+end{minipage}%  
 \end_layout
 
 \begin_layout Plain Layout
 
+	& 
+\end_layout
 
+\begin_layout Plain Layout
+
+	
 \backslash
-end{minipage}%     
+hspace{3cm}%
 \end_layout
 
 \begin_layout Plain Layout
 
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-hspace{0.5cm}%     
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
+	
 \backslash
 begin{minipage}{0.5
 \backslash
-textwidth}%         
+textwidth}%
 \end_layout
 
 \begin_layout Plain Layout
 
-	
+		
 \backslash
 emph{O Orientador,} 
 \backslash
 
 \backslash
- [2.08cm]                  
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-begin{picture}(130,20)(0,-22.5)             
-\end_layout
-
-\begin_layout Plain Layout
-
-		% 
-\backslash
-put(18,1){
-\backslash
-includegraphics[scale=0.48]{figs/assinatura-orientador.png}}             
+ [2.08cm]
 \end_layout
 
 \begin_layout Plain Layout
 
 		
+\backslash
+begin{picture}(5,20)(0,-22.5)
+\end_layout
+
+\begin_layout Plain Layout
+
+			% 
+\backslash
+put(18,1){
+\backslash
+includegraphics[scale=0.48]{figs/assinatura-orientador.png}}  
+\end_layout
+
+\begin_layout Plain Layout
+
+			
 \backslash
 put(0,0){
 \backslash
 rule{0.5
 \backslash
-linewidth}{0.5mm}}             
+linewidth}{0.5mm}}  
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\backslash
+put(0,-22.5){
+\backslash
+supname}  
 \end_layout
 
 \begin_layout Plain Layout
 
 		
 \backslash
+end{picture} % Caso não tenha co-orientador comente daqui...
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Caso não tenha coorientador 
+\begin_inset Quotes eld
+\end_inset
+
+comenta
+\begin_inset Quotes erd
+\end_inset
+
+ as linhas da box abaixo com um 
+\begin_inset Quotes eld
+\end_inset
+
+%
+\begin_inset Quotes erd
+\end_inset
+
+ antes do inicio de cada linha.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+	
+\backslash
+vspace{1cm}  
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+emph{O Co-orientador,}
+\backslash
+
+\backslash
+[2.08cm]  
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+begin{picture}(250,20)(0,-22.5)  
+\end_layout
+
+\begin_layout Plain Layout
+
+			% 
+\backslash
+put(18,1){
+\backslash
+includegraphics[scale=0.48]{figs/assinatura-orientador.png}}  
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\backslash
+put(0,0){
+\backslash
+rule{0.5
+\backslash
+linewidth}{0.5mm}}  
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\backslash
 put(0,-22.5){
 \backslash
-supname}         
+cosupname}  
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+end{picture}  % ...até aqui  
 \end_layout
 
 \begin_layout Plain Layout
 
 	
 \backslash
-end{picture}     
+end{minipage} 
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-end{minipage}
+end{tabular} 
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
 
 \begin_layout Plain Layout
+Não altere estas linhas de código.
+\end_layout
+
+\end_inset
+
 
 \end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
 
 \begin_layout Plain Layout
 

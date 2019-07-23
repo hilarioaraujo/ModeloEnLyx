@@ -480,6 +480,34 @@ status open
 
 \begin_layout Plain Layout
 
+\series bold
+\size large
+Elaborado por:
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Hilário Araújo (rocha.araujo@marinha.pt)
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+Ricardo Moura (ricardo.pinto.moura@marinha.pt)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
 \size large
 Preenche as seguintes linhas de código baixo indicadas.
  Terás as notas a amarelo para te ajudarem.
@@ -672,12 +700,12 @@ status open
 
 \begin_layout Plain Layout
 
-%
+
 \backslash
 cosupervisor{Dr.
  Jack 
 \backslash
-textsc{Smith}}}
+textsc{Smith}}
 \end_layout
 
 \end_inset
