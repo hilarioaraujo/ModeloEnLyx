@@ -6,9 +6,6 @@
 \origin unavailable
 \textclass book
 \begin_preamble
-\newcommand{\classname}{enStyle}
-
-
 %----------------------------------------------------------------------------------------
 %	REQUIRED PACKAGES
 %----------------------------------------------------------------------------------------
@@ -95,6 +92,8 @@
 		}%
 	}%
 }%
+
+
 
 %----------------------------------------------------------------------------------------
 %	PENALTIES
@@ -286,6 +285,9 @@ KOMA-script documentation for details.}]{fancyhdr}
 	\thispagestyle{plain}
 	\chapter*{\abslabel}
 }
+{
+  \vfil\vfil\vfil\null
+}
 
 
 
@@ -312,9 +314,9 @@ KOMA-script documentation for details.}]{fancyhdr}
 \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish} {\acknowledgementlabel}{Acknowledgement} % Acknowledgement text for English countries
 \providecaptionname{portuguese} {\acknowledgementlabel}{Agradecimentos}
 \newenvironment{acknowledgements}{
-	%\addchaptertocentry{\acknowledgementlabel} % Add the acknowledgements to the table of contents
 	\tttypeout{\acknowledgementlabel}
 	\null\vfil
+	%\addchaptertocentry{\acknowledgementlabel} % Add the acknowledgements to the table of contents
 	\thispagestyle{plain}
 	\chapter*{\acknowledgementlabel}
 }
@@ -330,11 +332,16 @@ KOMA-script documentation for details.}]{fancyhdr}
 \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish} {\introductionlabel}{Introduction} % introduction text for English countries
 \providecaptionname{portuguese} {\introductionlabel}{Introdução}
 \newenvironment{introduction}{
-	\addchaptertocentry{\introductionlabel} % Add the introduction to the table of contents
+	\checktoopen
 	\tttypeout{\introductionlabel}%
+	\addchaptertocentry{\introductionlabel} % Add the introduction to the table of contents
 	\thispagestyle{plain}%
+	\pagenumbering{arabic}
+
 	\chapter*{\introductionlabel}%
 }%
+
+
 
 
 %----------------------------------------------------------------------------------------
@@ -347,11 +354,13 @@ KOMA-script documentation for details.}]{fancyhdr}
 \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish} {\conclusionlabel}{Conclusion} % conclusion text for English countries
 \providecaptionname{portuguese} {\conclusionlabel}{Conclusão}
 \newenvironment{conclusion}{
-	\addchaptertocentry{\conclusionlabel} % Add the conclusion to the table of contents
+	\checktoopen
 	\tttypeout{\conclusionlabel}%
+	\addchaptertocentry{\conclusionlabel} % Add the conclusion to the table of contents
 	\thispagestyle{plain}%
 	\chapter*{\conclusionlabel}%
-}
+}%
+
 
 %----------------------------------------------------------------------------------------
 
@@ -581,7 +590,7 @@ status open
 
 
 \backslash
-frontmatter
+pagenumbering{Roman}
 \end_layout
 
 \end_inset
@@ -607,7 +616,7 @@ pagestyle{plain}
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand include
+LatexCommand input
 filename "frontmatter/titlepage.lyx"
 
 \end_inset
@@ -617,7 +626,7 @@ filename "frontmatter/titlepage.lyx"
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand include
+LatexCommand input
 filename "frontmatter/contratitlepage.lyx"
 
 \end_inset
@@ -627,7 +636,7 @@ filename "frontmatter/contratitlepage.lyx"
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand include
+LatexCommand input
 filename "frontmatter/frontmatter.lyx"
 
 \end_inset
@@ -679,34 +688,6 @@ set_width "auto"
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-%Main document starts here
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-mainmatter%
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-pagestyle{thesis}%
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Note Note
 status open
 
@@ -730,7 +711,7 @@ Depois basta inserir aqui o documento.
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand include
+LatexCommand input
 filename "chapters/introduction/introduction.lyx"
 
 \end_inset
@@ -739,8 +720,24 @@ filename "chapters/introduction/introduction.lyx"
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagestyle{thesis}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand include
+LatexCommand input
 filename "chapters/ch1/ch1.lyx"
 
 \end_inset
@@ -750,7 +747,7 @@ filename "chapters/ch1/ch1.lyx"
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand include
+LatexCommand input
 filename "chapters/ch2/ch2.lyx"
 
 \end_inset
@@ -760,7 +757,7 @@ filename "chapters/ch2/ch2.lyx"
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand include
+LatexCommand input
 filename "chapters/ch3/ch3.lyx"
 
 \end_inset
@@ -770,7 +767,7 @@ filename "chapters/ch3/ch3.lyx"
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand include
+LatexCommand input
 filename "chapters/conclusion/conclusion.lyx"
 
 \end_inset

@@ -128,10 +128,25 @@ status open
 
 \backslash
 epigraph 
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 null 
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 vfill 
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 begin{flushright}
 \end_layout
@@ -146,7 +161,11 @@ begin{flushright}
 A epígrafe traduz-se pela inscrição de sentença conceituosa que, de algum
  modo inspirou o autor na elaboração do trabalho ou nas suas ações correntes,
  e que o mesmo considere importante revelar no trabalho.
- Tem uma natureza facultativa.
+\end_layout
+
+\begin_layout Standard
+\align right
+Tem uma natureza facultativa.
 \end_layout
 
 \begin_layout Standard
@@ -158,8 +177,18 @@ status open
 
 \backslash
 end{flushright} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 vfill 
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 null
 \end_layout
@@ -206,10 +235,25 @@ status open
 
 \backslash
 dedicatory 
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 null 
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 vfill 
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 begin{flushright}
 \end_layout
@@ -241,8 +285,18 @@ status open
 
 \backslash
 end{flushright} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 vfill 
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 null 
 \end_layout
@@ -410,7 +464,12 @@ status open
 
 
 \backslash
-bigskip   {
+bigskip   
+\end_layout
+
+\begin_layout Plain Layout
+
+{
 \backslash
 noindent 
 \backslash
@@ -521,8 +580,18 @@ status open
 
 \backslash
 noindent 
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 newline 
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 textbf{Key words: } 
 \backslash
@@ -536,10 +605,16 @@ text{keyword1, ..., keyword2}
 status open
 
 \begin_layout Plain Layout
-% Defina até 6 palavras-chave que descrevam melhor o seu trabalho, e poderá
- referenciar-las ao longo do seu trabalho com o comando (
-\backslash
-keywordnames)
+% Traduza as 6 palavras que escreveu no info.lyx e coloque-as na linha de
+ código acima, onde diz 
+\begin_inset Quotes fld
+\end_inset
+
+keyword1, ..., keyword2
+\begin_inset Quotes frd
+\end_inset
+
+)
 \end_layout
 
 \end_inset
