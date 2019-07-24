@@ -286,9 +286,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 	\thispagestyle{plain}
 	\chapter*{\abslabel}
 }
-{  	
-  	\vfil\vfil\vfil\null	
-}
+
 
 
 \newcommand{\abslabelotherlang}{Resumo}
@@ -323,6 +321,40 @@ KOMA-script documentation for details.}]{fancyhdr}
 {
   \vfil\vfil\vfil\null
 }
+
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION PAGE DESIGN
+%----------------------------------------------------------------------------------------
+\newcommand{\introductionlabel}{Introduction}
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish} {\introductionlabel}{Introduction} % introduction text for English countries
+\providecaptionname{portuguese} {\introductionlabel}{Introdução}
+\newenvironment{introduction}{
+	\addchaptertocentry{\introductionlabel} % Add the introduction to the table of contents
+	\tttypeout{\introductionlabel}%
+	\thispagestyle{plain}%
+	\chapter*{\introductionlabel}%
+}%
+
+
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%	CONCLUSION PAGE DESIGN
+%----------------------------------------------------------------------------------------
+\newcommand{\conclusionlabel}{Conclusion}
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish} {\conclusionlabel}{Conclusion} % conclusion text for English countries
+\providecaptionname{portuguese} {\conclusionlabel}{Conclusão}
+\newenvironment{conclusion}{
+	\addchaptertocentry{\conclusionlabel} % Add the conclusion to the table of contents
+	\tttypeout{\conclusionlabel}%
+	\thispagestyle{plain}%
+	\chapter*{\conclusionlabel}%
+}
+
+%----------------------------------------------------------------------------------------
+
 
 %----------------------------------------------------------------------------------------
 %	APPENDICES AND ANNEX DESIGN
@@ -503,334 +535,6 @@ Ricardo Moura (ricardo.pinto.moura@marinha.pt)
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\size large
-Preenche as seguintes linhas de código baixo indicadas.
- Terás as notas a amarelo para te ajudarem.
-\end_layout
-
-\begin_layout Plain Layout
-
-\size large
-Não deves apagar nem editar qualquer código.
-\end_layout
-
-\begin_layout Plain Layout
-
-\size large
-Exempo:
-\end_layout
-
-\begin_layout Plain Layout
-
-\size large
-
-\backslash
-thesistitle{Título da Dissertação de Mestrado} ——————- 
-\backslash
-thesistitle{Modelo de Previsão de degelo das calotes polares}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-thesistitle{Título da Dissertação de Mestrado}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Escreva o título da tese, pode referenciar o titulo ao longa da dissertação
- utilizando o comando (
-\backslash
-ttitle)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-thesissubtitle{Subtítulo da Dissertação de Mestrado}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Escreva o subtítulo da tese, pode referenciar o titulo ao longa da dissertação
- utilizando o comando (
-\backslash
-subttitle)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-author{Nome do 
-\backslash
-textsc{Orientando}}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Escreva o seu nome, pode referenciar o autor ao longa da dissertação utilizando
- o comando (
-\backslash
-authorname)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-subjectarea{Engenharia Naval Ramo de Armas e Eletrónica}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Identifique a sua especialidade: Engenharia Naval Ramo de Armas e Eletrónica,
- Engenharia Naval Ramo de Mecânica, Marinha, Fuzileiros, Marinha e Administração
- Naval
-\end_layout
-
-\begin_layout Plain Layout
-Poderá referenciar-lo ao longo do seu trabalho com o comando (
-\backslash
-areaname)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-supervisor{Nome do 
-\backslash
-textsc{Orientador}}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-O nome do seu supervisor, isto é usado na página da contra capa, poderá
- referenciar-lo ao longo do seu trabalho com o comando (
-\backslash
-supname)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-cosupervisor{Dr.
- Jack 
-\backslash
-textsc{Smith}}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Caso tenha co-orientador, retire o símbolo 
-\begin_inset Quotes fld
-\end_inset
-
-%
-\begin_inset Quotes frd
-\end_inset
-
- e escreva o nome dele.
- Isto é usado na página da contra capa, poderá referenciar-lo ao longo do
- seu trabalho com o comando (
-\backslash
-cosupname)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-university{
-\backslash
-href{https://escolanaval.marinha.pt}{Escola Naval}}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Nome da universidade e endereço web, , e poderá referenciar-la ao longo
- do seu trabalho com o comando 
-\backslash
-univname
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-department{
-\backslash
-href{http://department.university.com}{Departamento Ciência e Tecnologias}}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Nome do departamento e endereço web, e poderá referenciar-la ao longo do
- seu trabalho com o comando 
-\backslash
-deptname % Classes e respetivos departamentos: % EN-AEL E EN-MEC - Departamento
- Ciência e Tecnologias % AN - Departamento de Humanidades e Gestão % M -
- Departamento de Ciências do Mar % FZ - Departamento de Ciências do Mar
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-thesisdate{Escola Naval, 
-\backslash
-today}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-data da impressão da tese, pode referenciar a data ao longa da dissertação
- utilizando o comando (
-\backslash
-tdate)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \align center
 \begin_inset Note Note
 status open
@@ -842,6 +546,27 @@ status open
 \size largest
 Início do Documento
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Info da tese: Documento que deverá ser alterado com os seus dados na raiz
+ do modelo.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "info.lyx"
 
 \end_inset
 
@@ -885,13 +610,6 @@ pagestyle{plain}
 LatexCommand include
 filename "frontmatter/titlepage.lyx"
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage cleardoublepage
 \end_inset
 
 
@@ -943,6 +661,24 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Standard
+\begin_inset FloatList algorithm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomencl_print
+LatexCommand printnomenclature
+set_width "auto"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -955,14 +691,14 @@ status open
 
 
 \backslash
-mainmatter
+mainmatter%
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-pagestyle{thesis}
+pagestyle{thesis}%
 \end_layout
 
 \end_inset
@@ -995,6 +731,16 @@ Depois basta inserir aqui o documento.
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
+filename "chapters/introduction/introduction.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
 filename "chapters/ch1/ch1.lyx"
 
 \end_inset
@@ -1016,6 +762,16 @@ filename "chapters/ch2/ch2.lyx"
 \begin_inset CommandInset include
 LatexCommand include
 filename "chapters/ch3/ch3.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "chapters/conclusion/conclusion.lyx"
 
 \end_inset
 

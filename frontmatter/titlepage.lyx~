@@ -137,7 +137,7 @@ centering
 \backslash
 includegraphics[width=1.3
 \backslash
-textwidth]{/frontmatter/assets/capa.jpg}         
+textwidth]{frontmatter/assets/capa.pdf}         
 \end_layout
 
 \begin_layout Plain Layout
@@ -171,7 +171,7 @@ begin{center}
 
 	
 \backslash
-vspace{3.5cm}     	
+vspace{3.5cm}
 \end_layout
 
 \begin_layout Plain Layout
@@ -182,14 +182,18 @@ Large
 \backslash
 bfseries 
 \backslash
-authorname}     	     	
+authorname} 
+\backslash
+
+\backslash
+     	
 \end_layout
 
 \begin_layout Plain Layout
 
 	
 \backslash
-vspace{1.5cm}     	
+vspace{1.5cm}
 \end_layout
 
 \begin_layout Plain Layout
@@ -204,7 +208,7 @@ ttitle}
 \backslash
 
 \backslash
- % Thesis title     	     	
+  	
 \end_layout
 
 \begin_layout Plain Layout
@@ -228,7 +232,11 @@ bfseries
 \backslash
 tsubtitle} 
 \backslash
-fi % Thesis sub title, if exists
+fi 
+\backslash
+
+\backslash
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -302,6 +310,13 @@ tdate} % Date
 
 \backslash
 end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+cleardoublepage
 \end_layout
 
 \end_inset

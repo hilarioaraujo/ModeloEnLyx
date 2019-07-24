@@ -33,7 +33,7 @@
 \spacing single
 \use_hyperref false
 \papersize default
-\use_geometry true
+\use_geometry false
 \use_package amsmath 1
 \use_package amssymb 1
 \use_package cancel 1
@@ -44,8 +44,8 @@
 \use_package stackrel 1
 \use_package stmaryrd 1
 \use_package undertilde 1
-\cite_engine natbib
-\cite_engine_type authoryear
+\cite_engine basic
+\cite_engine_type default
 \biblio_style plain
 \use_bibtopic false
 \use_indices false
@@ -58,8 +58,8 @@
 \shortcut idx
 \color #008000
 \end_index
-\secnumdepth 2
-\tocdepth 2
+\secnumdepth 3
+\tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
 \is_math_indent 0
@@ -79,57 +79,25 @@
 \begin_body
 
 \begin_layout Chapter
-Estrutura da Dissertação de Mestrado
-\end_layout
-
-\begin_layout Section
-Capítulos
+Escreve o título do apêndice
 \end_layout
 
 \begin_layout Standard
-Segue-se o corpo principal do trabalho, dividido em capítulos, numerados
- em numeração árabe (1, 2, 3,...), que podem subdividir-se em subcapítulos,
- sucessivamente, igualmente numerados segundo a lógica
+As dissertações e outros trabalhos científicos podem conter apêndices ou
+ anexos onde são expostos documentos ou outros materiais que tenham sido
+ usados durante o trabalho, sendo imprescindível que se juntem a ele, mas
+ que, pelo volume, não devem ser introduzidos com o texto por perturbarem
+ a sua harmonia e lógica.
+ São, desta forma, colocados enquanto elemento pós-textual, logo a seguir
+ aos glossários (se existirem) ou à bibliografia.
+ Importa, contudo, compreender o que os distingue um do outro.
 \end_layout
 
 \begin_layout Standard
-1.
- Capítulo 
-\end_layout
-
-\begin_layout Standard
-1.1 Subcapítulo 
-\end_layout
-
-\begin_layout Standard
-1.1.1 Sub-subcapítulo 
-\end_layout
-
-\begin_layout Standard
-etc...
-\end_layout
-
-\begin_layout Standard
-Aos capítulos e subcapítulos devem ser dados títulos, em letra destacada
- em negrito, de corpo sucessivamente 14, 13 e 12, sempre encostados à margem
- esquerda da página sem qualquer avanço.
-\end_layout
-
-\begin_layout Standard
-Não é possível apresentar um critério único para o ordenamento de capítulos
- e subcapítulos, decorrendo esta estrutura da natureza do próprio trabalho,
- variando consoante a área disciplinar ou científica do mesmo e das suas
- características próprias.
-\backslash
-
-\backslash
- Nalguns casos terá uma natureza explicativa, noutros passará pela exposição
- de resultados e sua interpretação, envolvendo a apresentação de critérios,
- tabelas de resultados, memória descritiva, etc.
-\end_layout
-
-\begin_layout Standard
-Cada um dos capítulos deve começar ao cimo de uma página ímpar (à direita).
+Os Apêndices englobam materiais elaborados pelo autor, como conjuntos de
+ gráficos, quadros ou tabelas de dados, eventualmente, traduções de textos,
+ organogramas ou esquemas julgados necessários e referenciados no próprio
+ texto.
 \end_layout
 
 \end_body

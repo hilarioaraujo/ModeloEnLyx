@@ -78,58 +78,89 @@
 
 \begin_body
 
-\begin_layout Chapter
-Estrutura da Dissertação de Mestrado
+\begin_layout Standard
+\align center
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\series bold
+\size larger
+Introdução
 \end_layout
 
-\begin_layout Section
-Capítulos
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Segue-se o corpo principal do trabalho, dividido em capítulos, numerados
- em numeração árabe (1, 2, 3,...), que podem subdividir-se em subcapítulos,
- sucessivamente, igualmente numerados segundo a lógica
-\end_layout
+\begin_inset ERT
+status open
 
-\begin_layout Standard
-1.
- Capítulo 
-\end_layout
+\begin_layout Plain Layout
 
-\begin_layout Standard
-1.1 Subcapítulo 
-\end_layout
-
-\begin_layout Standard
-1.1.1 Sub-subcapítulo 
-\end_layout
-
-\begin_layout Standard
-etc...
-\end_layout
-
-\begin_layout Standard
-Aos capítulos e subcapítulos devem ser dados títulos, em letra destacada
- em negrito, de corpo sucessivamente 14, 13 e 12, sempre encostados à margem
- esquerda da página sem qualquer avanço.
-\end_layout
-
-\begin_layout Standard
-Não é possível apresentar um critério único para o ordenamento de capítulos
- e subcapítulos, decorrendo esta estrutura da natureza do próprio trabalho,
- variando consoante a área disciplinar ou científica do mesmo e das suas
- características próprias.
-\backslash
 
 \backslash
- Nalguns casos terá uma natureza explicativa, noutros passará pela exposição
- de resultados e sua interpretação, envolvendo a apresentação de critérios,
- tabelas de resultados, memória descritiva, etc.
+introduction
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Cada um dos capítulos deve começar ao cimo de uma página ímpar (à direita).
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Escreve apartit daqui a Introdução
+\end_layout
+
+\begin_layout Plain Layout
+———————————————————————————————————————
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta vai ser a minha introdução coisa:
+\end_layout
+
+\begin_layout Standard
+A introdução prepara o leitor para uma leitura organizada e uma melhor compreens
+ão do trabalho científico que se está a apresentar.
+ Deve por isso começar por apresentar, de forma breve, a problemática em
+ que se insere o trabalho científico.
+ Sempre que for necessário fazer este enquadramento de forma detalhada e
+ mais longa, deve apenas referir-se o assunto na introdução indicando que
+ a apresentação mais detalhada será feita num dos primeiros capítulos (normalmen
+te o primeiro).
+\end_layout
+
+\begin_layout Standard
+Feita, contudo, esta apresentação do assunto, expondo a problemática subjacente
+ ao mesmo, deve apresentar-se o problema, ou problemas, objeto do estudo
+ efetuado, a que se segue uma explicação das vias seguidas na investigação
+ e da forma como elas transparecem na estrutura adotada para a apresentação.
+ Seguem-se, se forem relevantes e necessárias, algumas explicações sobre
+ a metodologia do trabalho, terminando com os objetivos que se pretende
+ alcançar.
+ Sempre que for necessário, para uma melhor compreensão por parte do leitor,
+ pode dividir-se a introdução em pequenos subcapítulos, indicando objetivos,
+ vias seguidas na investigação, metodologias e resultados pretendidos.
+\end_layout
+
+\begin_layout Standard
+Este capítulo não tem numeração específica e deve iniciar-se ao cimo de
+ uma página ímpar (à direita), independentemente do facto da página anterior
+ ser deixada com verso em branco.
 \end_layout
 
 \end_body

@@ -4,7 +4,7 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass article
+\textclass book
 \use_default_options false
 \maintain_unincluded_children false
 \language portuguese
@@ -178,13 +178,6 @@ null
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage cleardoublepage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Note Note
 status open
 
@@ -260,13 +253,6 @@ null
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage cleardoublepage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Note Note
 status open
 
@@ -308,13 +294,6 @@ Agradecimento é a expressão registada de uma gratidão às pessoas, entidades
  Sendo um elemento opcional, quando exista deve incluir-se na frente de
  folha a colocar logo após a folha de rosto ou das folhas da epígrafe e/ou
  da dedicatória, deixando o verso em branco.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage cleardoublepage
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -448,13 +427,6 @@ keywordnames}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage cleardoublepage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Note Note
 status open
 
@@ -572,6 +544,10 @@ keywordnames)
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
 
 \end_layout
 

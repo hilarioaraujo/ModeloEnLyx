@@ -4,7 +4,7 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass memoir
+\textclass book
 \begin_preamble
 \RequirePackage[utf8]{inputenc} % Required for inputting portuguese characters
 \RequirePackage[T1]{fontenc} % Output font encoding for portuguese characters

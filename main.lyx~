@@ -12,6 +12,11 @@
 %----------------------------------------------------------------------------------------
 %	REQUIRED PACKAGES
 %----------------------------------------------------------------------------------------
+\usepackage{titling}
+\usepackage{eso-pic}
+
+\usepackage{etoolbox}
+\usepackage{xparse}
 
 \usepackage{ifthen}
 
@@ -30,7 +35,14 @@
 \usepackage{graphicx} % Required to include images
 \graphicspath{{.}}
 
-\usepackage[dvipsnames]{xcolor} % Required for extra color names
+\usepackage{tikz} % Required for creating graphics programmatically (can be removed if not used)
+%\usetikzlibrary{arrows} % Required for fancy arrows in TiKZ graphics (can be removed if not used)
+
+\usepackage{pgfplots} % Required for drawing high--quality function plots (can be removed if not used)
+\pgfplotsset{compat=newest}
+
+
+%\usepackage[dvipsnames]{xcolor} % Required for extra color names
 
 \usepackage{booktabs} % Required for better table rules
 
@@ -40,6 +52,8 @@
 %\RequirePackage[utf8]{inputenc} % Required for inputting portuguese characters
 %\RequirePackage[T1]{fontenc} % Output font encoding for portuguese characters
 
+\usepackage[centerlast,small,sc]{caption} % Required for customising the captions
+\setlength{\captionmargin}{50pt}
 
 %----------------------------------------------------------------------------------------
 %	CLASS OPTIONS
@@ -96,6 +110,8 @@
 %	PARAGRAPHS
 %----------------------------------------------------------------------------------------
 \usepackage{indentfirst} % Comment caso não queira que o 1º paragrafo fique adiantado 
+\setlength{\parindent}{1.5cm} % distância de adiantamento do paragrafo
+\raggedbottom
 
 %----------------------------------------------------------------------------------------
 %	HEADERS AND FOOTERS
@@ -198,47 +214,25 @@ KOMA-script documentation for details.}]{fancyhdr}
 
 \renewcommand{\@pnumwidth}{2em} % Corrigir espaço para páginas com numeração romana na ToC
 
-\usepackage{etoolbox}
-\usepackage{appendix}
-
-\newcommand{\appendixfile}[1]{%
-	\listgadd{\enStyle@appendix@list}{#1}%
-}
-
-\newcommand{\enStyle@printappendix}[1]{%
-	\InputIfFileExists{appendices/#1}{\cleardoublepage}{}%
-}
-
-\newcommand{\printappendixes}{%
-	\ifthenelse{\isundefined\enStyle@appendix@list}{}%
-		{\renewcommand{\appendixtocname}{\appendixnamepl}%
-         \cleardoublepage\appendix\addappheadtotoc%
-		 \forlistloop{\enStyle@printappendix}{\enStyle@appendix@list}}%
-} 
 
 
-\newcommand{\annexfile}[1]{%
-	\listgadd{\enStyle@annex@list}{#1}%
-}
+%----------------------------------------------------------------------------------------
+%	TITLEPAGE PAGE DESIGN
+%----------------------------------------------------------------------------------------
+\newcommand{\dissertationdisclamer}{A dissertation submitted in partial fulfilment of the \\ requirements for the degree of Marine Military Sciences, specialisation of}
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\dissertationdisclamer}{A dissertation submitted in partial fulfillment of \\ the requirements for the degree of Marine Military Sciences, specialisation of}
+\providecaptionname{portuguese}{\dissertationdisclamer}{Disserta\c{c}\~ao para obten\c{c}\~ao do Grau de Mestre em \\ Ciências Militares Navais, na especialidade de} % Portuguese 
 
-\newcommand{\enStyle@printannex}[1]{%
-	\InputIfFileExists{annexes/#1}{\cleardoublepage}{}%
-}
 
-\newcommand{\printannexes}{%
-	\ifthenelse{\isundefined\enStyle@annex@list}{}%
-		{\renewcommand{\appendixtocname}{\annexnamepl}%
-         \cleardoublepage\annex\addappheadtotoc%
-		 \forlistloop{\enStyle@printannex}{\enStyle@annex@list}}%
-} 
-
-\newcommand{\annex}{
-  \xdef\Hy@chapapp{annex}%
-  \setcounter{chapter}{0}%
-  \setcounter{section}{0}%
-  \gdef\@chapapp{\annexname}%
-  \gdef\thechapter{\@Roman\c@chapter}%
-}
+%----------------------------------------------------------------------------------------
+%	CONTRA - TITLEPAGE PAGE DESIGN
+%----------------------------------------------------------------------------------------
+\newcommand{\supervisorlabel}{Supervisor}
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\supervisorlabel}{Supervisor}
+\providecaptionname{portuguese}{\supervisorlabel}{Orientador}
+\newcommand{\cosupervisorlabel}{Co-Supervisor}
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\cosupervisorlabel}{Co-Supervisor}
+\providecaptionname{portuguese}{\cosupervisorlabel}{Co-Orientador}
 
 
 %----------------------------------------------------------------------------------------
@@ -290,13 +284,10 @@ KOMA-script documentation for details.}]{fancyhdr}
 	\tttypeout{\abstractname}
 	%\addchaptertocentry{\abstractname} % Add the abstract to the table of contents
 	\thispagestyle{plain}
-	\chapter*{\abslabel}	
+	\chapter*{\abslabel}
 }
-{
-  \bigskip
-  {\noindent \bf \keywordslabel:} {\keywordnames}
-  \vfil\vfil\vfil\null
-}
+
+
 
 \newcommand{\abslabelotherlang}{Resumo}
 \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\abslabelotherlang}{Resumo}
@@ -330,6 +321,85 @@ KOMA-script documentation for details.}]{fancyhdr}
 {
   \vfil\vfil\vfil\null
 }
+
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION PAGE DESIGN
+%----------------------------------------------------------------------------------------
+\newcommand{\introductionlabel}{Introduction}
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish} {\introductionlabel}{Introduction} % introduction text for English countries
+\providecaptionname{portuguese} {\introductionlabel}{Introdução}
+\newenvironment{introduction}{
+	\addchaptertocentry{\introductionlabel} % Add the introduction to the table of contents
+	\tttypeout{\introductionlabel}
+	\thispagestyle{plain}
+	\chapter*{\introductionlabel}
+}
+
+
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%	CONCLUSION PAGE DESIGN
+%----------------------------------------------------------------------------------------
+\newcommand{\conclusionlabel}{Conclusion}
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish} {\conclusionlabel}{Conclusion} % conclusion text for English countries
+\providecaptionname{portuguese} {\conclusionlabel}{Conclusão}
+\newenvironment{conclusion}{
+	\addchaptertocentry{\conclusionlabel} % Add the conclusion to the table of contents
+	\tttypeout{\conclusionlabel}
+	\thispagestyle{plain}
+	\chapter*{\conclusionlabel}
+}
+
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%	APPENDICES AND ANNEX DESIGN
+%----------------------------------------------------------------------------------------
+\usepackage{etoolbox}
+\usepackage{appendix}
+
+\newcommand{\appendixfile}[1]{%
+	\listgadd{\enStyle@appendix@list}{#1}%
+}
+
+\newcommand{\enStyle@printappendix}[1]{%
+	\InputIfFileExists{appendices/#1}{\cleardoublepage}{}%
+}
+
+\newcommand{\printappendixes}{%
+	\ifthenelse{\isundefined\enStyle@appendix@list}{}%
+		{\renewcommand{\appendixtocname}{\appendixnamepl}%
+         \cleardoublepage\appendix\addappheadtotoc%
+		 \forlistloop{\enStyle@printappendix}{\enStyle@appendix@list}}%
+} 
+
+
+\newcommand{\annexfile}[1]{%
+	\listgadd{\enStyle@annex@list}{#1}%
+}
+
+\newcommand{\enStyle@printannex}[1]{%
+	\InputIfFileExists{annexes/#1}{\cleardoublepage}{}%
+}
+
+\newcommand{\printannexes}{%
+	\ifthenelse{\isundefined\enStyle@annex@list}{}%
+		{\renewcommand{\appendixtocname}{\annexnamepl}%
+         \cleardoublepage\annex\addappheadtotoc%
+		 \forlistloop{\enStyle@printannex}{\enStyle@annex@list}}%
+} 
+
+\newcommand{\annex}{
+  \xdef\Hy@chapapp{annex}%
+  \setcounter{chapter}{0}%
+  \setcounter{section}{0}%
+  \gdef\@chapapp{\annexname}%
+  \gdef\thechapter{\@Roman\c@chapter}%
+}
 \end_preamble
 \options portuguese
 \use_default_options false
@@ -342,7 +412,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 \font_sans "default" "default"
 \font_typewriter "default" "default"
 \font_math "auto" "auto"
-\font_default_family default
+\font_default_family rmdefault
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
@@ -356,7 +426,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 \bibtex_command default
 \index_command default
 \float_placement h
-\paperfontsize default
+\paperfontsize 12
 \spacing single
 \use_hyperref true
 \pdf_bookmarks true
@@ -407,7 +477,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 \quotes_style french
 \dynamic_quotes 0
 \papercolumns 1
-\papersides 1
+\papersides 2
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
@@ -442,321 +512,21 @@ status open
 
 \begin_layout Plain Layout
 
+\series bold
 \size large
-Preenche as seguintes linhas de código baixo indicadas.
- Terás as notas a amarelo para te ajudarem.
+Elaborado por:
 \end_layout
 
-\begin_layout Plain Layout
-
-\size large
-Não deves apagar nem editar qualquer código.
-\end_layout
-
-\begin_layout Plain Layout
+\begin_layout Itemize
 
 \size large
-Exempo:
+Hilário Araújo (rocha.araujo@marinha.pt)
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Itemize
 
 \size large
-
-\backslash
-thesistitle{Título da Dissertação de Mestrado} ——————- 
-\backslash
-thesistitle{Modelo de Previsão de degelo das calotes polares}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-thesistitle{Título da Dissertação de Mestrado}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Escreva o título da tese, pode referenciar o titulo ao longa da dissertação
- utilizando o comando (
-\backslash
-ttitle)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-thesissubtitle{Subtítulo da Dissertação de Mestrado}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Escreva o subtítulo da tese, pode referenciar o titulo ao longa da dissertação
- utilizando o comando (
-\backslash
-subttitle)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-author{Nome do 
-\backslash
-textsc{Orientando}}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Escreva o seu nome, pode referenciar o autor ao longa da dissertação utilizando
- o comando (
-\backslash
-authorname)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-subjectarea{Engenharia Naval Ramo de Armas e Eletrónica}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Identifique a sua especialidade: Engenharia Naval Ramo de Armas e Eletrónica,
- Engenharia Naval Ramo de Mecânica, Marinha, Fuzileiros, Marinha e Administração
- Naval
-\end_layout
-
-\begin_layout Plain Layout
-Poderá referenciar-lo ao longo do seu trabalho com o comando (
-\backslash
-areaname)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-supervisor{Nome do 
-\backslash
-textsc{Orientador}}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-O nome do seu supervisor, isto é usado na página da contra capa, poderá
- referenciar-lo ao longo do seu trabalho com o comando (
-\backslash
-supname)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-%
-\backslash
-cosupervisor{Dr.
- Jack 
-\backslash
-textsc{Smith}}}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Caso tenha co-orientador, retire o símbolo 
-\begin_inset Quotes fld
-\end_inset
-
-%
-\begin_inset Quotes frd
-\end_inset
-
- e escreva o nome dele.
- Isto é usado na página da contra capa, poderá referenciar-lo ao longo do
- seu trabalho com o comando (
-\backslash
-cosupname)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-university{
-\backslash
-href{https://escolanaval.marinha.pt}{Escola Naval}}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Nome da universidade e endereço web, , e poderá referenciar-la ao longo
- do seu trabalho com o comando 
-\backslash
-univname
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-department{
-\backslash
-href{http://department.university.com}{Departamento Ciência e Tecnologias}}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Nome do departamento e endereço web, e poderá referenciar-la ao longo do
- seu trabalho com o comando 
-\backslash
-deptname % Classes e respetivos departamentos: % EN-AEL E EN-MEC - Departamento
- Ciência e Tecnologias % AN - Departamento de Humanidades e Gestão % M -
- Departamento de Ciências do Mar % FZ - Departamento de Ciências do Mar
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-thesisdate{Escola Naval, 
-\backslash
-today}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-data da impressão da tese, pode referenciar a data ao longa da dissertação
- utilizando o comando (
-\backslash
-tdate)
+Ricardo Moura (ricardo.pinto.moura@marinha.pt)
 \end_layout
 
 \end_inset
@@ -776,6 +546,27 @@ status open
 \size largest
 Início do Documento
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Info da tese: Documento que deverá ser alterado com os seus dados na raiz
+ do modelo.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "info.lyx"
 
 \end_inset
 
@@ -808,6 +599,23 @@ status open
 \backslash
 pagestyle{plain}
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "frontmatter/titlepage.lyx"
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "frontmatter/contratitlepage.lyx"
 
 \end_inset
 
@@ -850,6 +658,24 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Standard
+\begin_inset FloatList algorithm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomencl_print
+LatexCommand printnomenclature
+set_width "auto"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -862,14 +688,14 @@ status open
 
 
 \backslash
-mainmatter
+mainmatter%
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-pagestyle{thesis}
+pagestyle{thesis}%
 \end_layout
 
 \end_inset
@@ -902,6 +728,16 @@ Depois basta inserir aqui o documento.
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
+filename "chapters/introduction/introduction.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
 filename "chapters/ch1/ch1.lyx"
 
 \end_inset
@@ -923,6 +759,16 @@ filename "chapters/ch2/ch2.lyx"
 \begin_inset CommandInset include
 LatexCommand include
 filename "chapters/ch3/ch3.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "chapters/conclusion/conclusion.lyx"
 
 \end_inset
 
@@ -989,7 +835,7 @@ status open
 
 
 \backslash
-appendixfile{appendix1}%
+appendixfile{appendix1}
 \end_layout
 
 \begin_layout Plain Layout
@@ -1022,7 +868,7 @@ status open
 
 
 \backslash
-annexfile{annex1}%
+annexfile{annex1}
 \end_layout
 
 \begin_layout Plain Layout
