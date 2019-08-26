@@ -9,6 +9,7 @@
 %----------------------------------------------------------------------------------------
 %	REQUIRED PACKAGES
 %----------------------------------------------------------------------------------------
+
 \usepackage{titling}
 \usepackage{eso-pic}
 
@@ -51,6 +52,7 @@
 
 \usepackage[centerlast,small,sc]{caption} % Required for customising the captions
 \setlength{\captionmargin}{50pt}
+
 
 %----------------------------------------------------------------------------------------
 %	CLASS OPTIONS
@@ -432,9 +434,9 @@ KOMA-script documentation for details.}]{fancyhdr}
 \graphics default
 \default_output_format pdf2
 \output_sync 0
-\bibtex_command default
+\bibtex_command biber
 \index_command default
-\float_placement h
+\float_placement H
 \paperfontsize 12
 \spacing single
 \use_hyperref true
@@ -459,9 +461,11 @@ KOMA-script documentation for details.}]{fancyhdr}
 \use_package stackrel 1
 \use_package stmaryrd 1
 \use_package undertilde 1
-\cite_engine basic
-\cite_engine_type default
-\biblio_style plain
+\cite_engine biblatex
+\cite_engine_type authoryear
+\biblio_style plainnat
+\biblatex_bibstyle authoryear
+\biblatex_citestyle authoryear
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -642,6 +646,17 @@ filename "frontmatter/frontmatter.lyx"
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Deverá aceder ao documento frontmatter para puder preencher as páginas iniciais
+ da sua dissertação.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -663,6 +678,24 @@ LatexCommand tableofcontents
 
 \begin_layout Standard
 \begin_inset FloatList table
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList algorithm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomencl_print
+LatexCommand printnomenclature
+set_width "auto"
 
 \end_inset
 
@@ -779,7 +812,7 @@ Deverá...
 LatexCommand bibtex
 btprint "btPrintCited"
 bibfiles "mainbibliography"
-options "plain"
+options "bibtotoc"
 
 \end_inset
 
@@ -800,8 +833,23 @@ Não altere nem elimine nenhuma destas linhas de código.
 
 \begin_layout Plain Layout
 Se não quiser colocar anexo ou apendice elimine apenas a linha onde aparece
- include.
- appendix1.lyx ou include: annex1.lyx
+ 
+\begin_inset Quotes fld
+\end_inset
+
+include: appendix1.lyx
+\begin_inset Quotes frd
+\end_inset
+
+ ou 
+\begin_inset Quotes fld
+\end_inset
+
+include: annex1.lyx
+\begin_inset Quotes frd
+\end_inset
+
+
 \end_layout
 
 \end_inset

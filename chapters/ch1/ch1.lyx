@@ -131,8 +131,8 @@ Não é possível apresentar um critério único para o ordenamento de capítulo
 \begin_layout Standard
 Cada um dos capítulos deve começar ao cimo de uma página ímpar (à direita).
 \begin_inset CommandInset citation
-LatexCommand citet
-key "Reference3"
+LatexCommand citep
+key "Reference1"
 literal "false"
 
 \end_inset
