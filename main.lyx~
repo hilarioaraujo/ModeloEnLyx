@@ -370,8 +370,8 @@ KOMA-script documentation for details.}]{fancyhdr}
 %----------------------------------------------------------------------------------------
 %	APPENDICES AND ANNEX DESIGN
 %----------------------------------------------------------------------------------------
-\usepackage{etoolbox}
-\usepackage{appendix}
+\RequirePackage{etoolbox}
+\RequirePackage{appendix}
 
 \newcommand{\appendixfile}[1]{%
 	\listgadd{\enStyle@appendix@list}{#1}%
@@ -414,6 +414,11 @@ KOMA-script documentation for details.}]{fancyhdr}
 \end_preamble
 \options portuguese
 \use_default_options false
+\master main.lyx
+\begin_modules
+enumitem
+changebars
+\end_modules
 \maintain_unincluded_children false
 \language portuguese
 \language_package default
@@ -433,9 +438,10 @@ KOMA-script documentation for details.}]{fancyhdr}
 \use_dash_ligatures true
 \graphics default
 \default_output_format pdf2
-\output_sync 0
+\output_sync 1
+\output_sync_macro "\usepackage[active]{srcltx}"
 \bibtex_command biber
-\index_command default
+\index_command makeindex
 \float_placement H
 \paperfontsize 12
 \spacing single
@@ -448,7 +454,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 \pdf_pdfborder false
 \pdf_colorlinks false
 \pdf_backref false
-\pdf_pdfusetitle true
+\pdf_pdfusetitle false
 \papersize a4paper
 \use_geometry true
 \use_package amsmath 1
@@ -464,16 +470,16 @@ KOMA-script documentation for details.}]{fancyhdr}
 \cite_engine biblatex
 \cite_engine_type authoryear
 \biblio_style plainnat
-\biblatex_bibstyle authoryear
-\biblatex_citestyle authoryear
+\biblatex_bibstyle apa
+\biblatex_citestyle apa
 \use_bibtopic false
-\use_indices false
+\use_indices true
 \paperorientation portrait
 \suppress_date false
 \justification true
 \use_refstyle 1
 \use_minted 0
-\index Index
+\index Lista de Acrónimos
 \shortcut idx
 \color #008000
 \end_index
@@ -587,6 +593,49 @@ filename "info.lyx"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+—————————————————————————————————————————————————————————————————————–
+\end_layout
+
+\begin_layout Plain Layout
+Não altere nada nas linhas abaixo de código.
+\end_layout
+
+\begin_layout Plain Layout
+—————————————————————————————————————————————————————————————————————–
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypersetup{pdfauthor=
+\backslash
+authorname,pdftitle=
+\backslash
+ttitle,pdfkeywords=
+\backslash
+keywordnames}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -660,6 +709,20 @@ Deverá aceder ao documento frontmatter para puder preencher as páginas iniciai
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Apartir daqui poderá eliminar os respetibos indices caso não pretenda que
+ a sua dissertação os tenha.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
 
@@ -716,7 +779,17 @@ Se quiser criar mais do que 3 capítulos, copie a pasta de ch1 e cola na
 \end_layout
 
 \begin_layout Itemize
-Depois basta inserir aqui o documento.
+Depois basta inserir aqui o documento (Inserir - Ficheiro - Documento Lys...
+ - E depois escolha o ficheiro)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Atenção: 
+\series default
+Deverá certificar-se que ao selecionar o documento, este apareça como entrada(pt
+) ou input(en) , no seu estilo de inserção.
 \end_layout
 
 \end_inset
@@ -728,6 +801,29 @@ Depois basta inserir aqui o documento.
 \begin_inset CommandInset include
 LatexCommand input
 filename "chapters/introduction/introduction.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Não apague esta linha de código: 
+\begin_inset Quotes fld
+\end_inset
+
+
+\backslash
+pagestyle{thesis}
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -799,7 +895,10 @@ Bibilografia.
 \end_layout
 
 \begin_layout Plain Layout
-Deverá...
+Deverá utilizar o software mendeley, uma vez que este compila toda a sua
+ biblioteca num documento .bib, necessário para utilizar este módulo de bibliogra
+fia.
+ 
 \end_layout
 
 \end_inset
@@ -824,34 +923,135 @@ options "bibtotoc"
 status open
 
 \begin_layout Plain Layout
-Apêndices e dos Anexos
+\align center
+
+\series bold
+\size large
+Apêndices 
 \end_layout
 
 \begin_layout Plain Layout
-Não altere nem elimine nenhuma destas linhas de código.
-\end_layout
 
-\begin_layout Plain Layout
-Se não quiser colocar anexo ou apendice elimine apenas a linha onde aparece
+\series bold
+Não altere nem elimine a linha de código:
+\series default
  
 \begin_inset Quotes fld
 \end_inset
 
-include: appendix1.lyx
+
+\backslash
+printappendixes
 \begin_inset Quotes frd
 \end_inset
 
- ou 
+ uma vez que se não tiver incluido nenhum apêndice, nada irá ser mostrado.
+\end_layout
+
+\begin_layout Enumerate
+Se não quiser colocar nenhum apêndice elimine as linha: 
+\end_layout
+
+\begin_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
 \begin_inset Quotes fld
 \end_inset
 
-include: annex1.lyx
+input(en) ou entranda(pt) : appendix1.lyx
 \begin_inset Quotes frd
 \end_inset
 
 
 \end_layout
 
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Quotes fld
+\end_inset
+
+
+\backslash
+appendixfile{appendix1}
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Caso pretenda adicionar mais apendices deverá introduzir depois da linha
+ de código 
+\begin_inset Quotes fld
+\end_inset
+
+
+\backslash
+appendixfile{appendix1}
+\begin_inset Quotes frd
+\end_inset
+
+ o seguinte código: 
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+\begin_inset Quotes fld
+\end_inset
+
+
+\backslash
+appendixfile{appendix2}
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Quotes fld
+\end_inset
+
+
+\backslash
+appendixfile{appendix3}
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Quotes fld
+\end_inset
+
+
+\backslash
+appendixfile{appendix<n>}
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+e incluir os documentos 
+\end_layout
+
+\begin_layout Plain Layout
+appendix2.lyx
+\end_layout
+
+\begin_layout Plain Layout
+appendix3.lyx
+\end_layout
+
+\begin_layout Plain Layout
+appendix<n>.lyx
+\end_layout
+
+\end_deeper
 \end_inset
 
 
@@ -872,7 +1072,7 @@ appendixfile{appendix1}
 
 
 \backslash
-printappendixes 
+printappendixes
 \end_layout
 
 \end_inset
@@ -882,9 +1082,148 @@ printappendixes
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand include
+LatexCommand input
 filename "appendices/appendix1.lyx"
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\series bold
+\size large
+Anexos
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Não altere nem elimine a linha de código:
+\series default
+ 
+\begin_inset Quotes fld
+\end_inset
+
+
+\backslash
+printannexes
+\begin_inset Quotes frd
+\end_inset
+
+ uma vez que se não tiver incluido nenhum apêndice, nada irá ser mostrado.
+\end_layout
+
+\begin_layout Enumerate
+Se não quiser colocar nenhum apêndice elimine as linha: 
+\end_layout
+
+\begin_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Quotes fld
+\end_inset
+
+input(en) ou entranda(pt) : annex1.lyx
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Quotes fld
+\end_inset
+
+
+\backslash
+annexfile{annex1}
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Caso pretenda adicionar mais apendices deverá introduzir depois da linha
+ de código 
+\begin_inset Quotes fld
+\end_inset
+
+
+\backslash
+annexfile{annex1}
+\begin_inset Quotes frd
+\end_inset
+
+ o seguinte código: 
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+\begin_inset Quotes fld
+\end_inset
+
+
+\backslash
+annexfile{annex2}
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Quotes fld
+\end_inset
+
+
+\backslash
+annexfile{annex3}
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Quotes fld
+\end_inset
+
+
+\backslash
+annexfile{annex<n>}
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+e incluir os documentos 
+\end_layout
+
+\begin_layout Plain Layout
+annex2.lyx
+\end_layout
+
+\begin_layout Plain Layout
+annex3.lyx
+\end_layout
+
+\begin_layout Plain Layout
+annex<n>.lyx
+\end_layout
+
+\end_deeper
 \end_inset
 
 
@@ -915,7 +1254,7 @@ printannexes
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand include
+LatexCommand input
 filename "annexes/annex1.lyx"
 
 \end_inset

@@ -420,31 +420,6 @@ Após cada um dos resumos devem ser indicadas cinco palavras-chave – portuguê
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-keywords{Palavra-chave 1, ..., Palavra-chave 2}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-% Defina até 6 palavras-chave que descrevam melhor o seu trabalho, e poderá
- referenciar-las ao longo do seu trabalho com o comando (
-\backslash
-keywordnames)
-\end_layout
-
-\end_inset
-
 
 \end_layout
 

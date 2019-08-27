@@ -988,7 +988,7 @@ Caso pretenda adicionar mais apendices deverá introduzir depois da linha
 
 
 \backslash
-appendixfile{appendix2}
+appendixfile{appendix1}
 \begin_inset Quotes frd
 \end_inset
 
@@ -1002,7 +1002,7 @@ appendixfile{appendix2}
 
 
 \backslash
-appendixfile{appendix3}
+appendixfile{appendix2}
 \begin_inset Quotes frd
 \end_inset
 
@@ -1015,7 +1015,7 @@ appendixfile{appendix3}
 
 
 \backslash
-appendixfile{appendix4}
+appendixfile{appendix3}
 \begin_inset Quotes frd
 \end_inset
 
@@ -1036,15 +1036,15 @@ appendixfile{appendix<n>}
 \end_layout
 
 \begin_layout Plain Layout
-e incluir os documentos (Inserir - Ficheiro - Documento Filho)
+e incluir os documentos 
+\end_layout
+
+\begin_layout Plain Layout
+appendix2.lyx
 \end_layout
 
 \begin_layout Plain Layout
 appendix3.lyx
-\end_layout
-
-\begin_layout Plain Layout
-appendix4.lyx
 \end_layout
 
 \begin_layout Plain Layout
@@ -1072,13 +1072,6 @@ appendixfile{appendix1}
 
 
 \backslash
-appendixfile{appendix2}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
 printappendixes
 \end_layout
 
@@ -1091,16 +1084,6 @@ printappendixes
 \begin_inset CommandInset include
 LatexCommand input
 filename "appendices/appendix1.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "appendices/appendix2.lyx"
 
 \end_inset
 
@@ -1177,7 +1160,7 @@ Caso pretenda adicionar mais apendices deverá introduzir depois da linha
 
 
 \backslash
-annexfile{annex2}
+annexfile{annex1}
 \begin_inset Quotes frd
 \end_inset
 
@@ -1191,7 +1174,7 @@ annexfile{annex2}
 
 
 \backslash
-annexfile{annex3}
+annexfile{annex2}
 \begin_inset Quotes frd
 \end_inset
 
@@ -1204,7 +1187,7 @@ annexfile{annex3}
 
 
 \backslash
-annexfile{annex4}
+annexfile{annex3}
 \begin_inset Quotes frd
 \end_inset
 
@@ -1225,15 +1208,15 @@ annexfile{annex<n>}
 \end_layout
 
 \begin_layout Plain Layout
-e incluir os documentos (Inserir - Ficheiro - Documento Filho)
+e incluir os documentos 
+\end_layout
+
+\begin_layout Plain Layout
+annex2.lyx
 \end_layout
 
 \begin_layout Plain Layout
 annex3.lyx
-\end_layout
-
-\begin_layout Plain Layout
-annex4.lyx
 \end_layout
 
 \begin_layout Plain Layout
@@ -1261,13 +1244,6 @@ annexfile{annex1}
 
 
 \backslash
-appendixfile{annex2}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
 printannexes
 \end_layout
 
@@ -1280,16 +1256,6 @@ printannexes
 \begin_inset CommandInset include
 LatexCommand input
 filename "annexes/annex1.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "annexes/annex2.lyx"
 
 \end_inset
 
