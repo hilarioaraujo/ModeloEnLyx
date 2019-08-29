@@ -55,6 +55,39 @@
 
 
 %----------------------------------------------------------------------------------------
+%	List of Symbols, Abreviations, Symbols
+%----------------------------------------------------------------------------------------
+
+\usepackage{siunitx}
+\sisetup{%
+  inter-unit-product=\ensuremath{{}\cdot{}},
+  per-mode=symbol
+}
+
+\providecaptionname{english}{\abreviationsname}{Abreviations}
+\providecaptionname{portuguese}{\abreviationsname}{Abreviaturas}
+
+\providecaptionname{english}{\symbolsname}{Symbols}
+\providecaptionname{portuguese}{\symbolsname}{Símbolos}
+
+\providecaptionname{english}{\acronymsname}{Acronyms}
+\providecaptionname{portuguese}{\acronymsname}{Acrónimos}
+
+\renewcommand{\nomgroup}[1]{%
+  \ifthenelse{\equal{#1}{A}}{\item[\textbf{\Large \abreviationsname}]}{%
+  		\ifthenelse{\equal{#1}{C}}{\vspace{20pt} \item[\textbf{\Large \acronymsname}]}{%
+			\ifthenelse{\equal{#1}{S}}{\vspace{20pt} \item[\textbf{\Large \symbolsname}]}{%
+        			{}%
+    }%
+    }%
+    }%
+}%
+
+\newcommand{\nomunit}[1]{%
+  \renewcommand{\nomentryend}{\hspace*{\fill}#1}%
+}
+
+%----------------------------------------------------------------------------------------
 %	CLASS OPTIONS
 %----------------------------------------------------------------------------------------
 \usepackage{parskip} % If the parskip option is passed to the class, require the parskip package 
@@ -473,7 +506,7 @@ changebars
 \biblatex_bibstyle apa
 \biblatex_citestyle apa
 \use_bibtopic false
-\use_indices true
+\use_indices false
 \paperorientation portrait
 \suppress_date false
 \justification true
@@ -628,6 +661,15 @@ authorname,pdftitle=
 ttitle,pdfkeywords=
 \backslash
 keywordnames}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand
+\backslash
+nomname{Lista de Abreviaturas, Acrónimos e Símbolos}
 \end_layout
 
 \end_inset
@@ -988,7 +1030,7 @@ Caso pretenda adicionar mais apendices deverá introduzir depois da linha
 
 
 \backslash
-appendixfile{appendix1}
+appendixfile{appendix2}
 \begin_inset Quotes frd
 \end_inset
 
@@ -1002,7 +1044,7 @@ appendixfile{appendix1}
 
 
 \backslash
-appendixfile{appendix2}
+appendixfile{appendix3}
 \begin_inset Quotes frd
 \end_inset
 
@@ -1015,7 +1057,7 @@ appendixfile{appendix2}
 
 
 \backslash
-appendixfile{appendix3}
+appendixfile{appendix4}
 \begin_inset Quotes frd
 \end_inset
 
@@ -1036,15 +1078,15 @@ appendixfile{appendix<n>}
 \end_layout
 
 \begin_layout Plain Layout
-e incluir os documentos 
-\end_layout
-
-\begin_layout Plain Layout
-appendix2.lyx
+e incluir os documentos (Inserir - Ficheiro - Documento Filho)
 \end_layout
 
 \begin_layout Plain Layout
 appendix3.lyx
+\end_layout
+
+\begin_layout Plain Layout
+appendix4.lyx
 \end_layout
 
 \begin_layout Plain Layout
@@ -1072,6 +1114,13 @@ appendixfile{appendix1}
 
 
 \backslash
+appendixfile{appendix2}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 printappendixes
 \end_layout
 
@@ -1084,6 +1133,16 @@ printappendixes
 \begin_inset CommandInset include
 LatexCommand input
 filename "appendices/appendix1.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "appendices/appendix2.lyx"
 
 \end_inset
 
@@ -1160,7 +1219,7 @@ Caso pretenda adicionar mais apendices deverá introduzir depois da linha
 
 
 \backslash
-annexfile{annex1}
+annexfile{annex2}
 \begin_inset Quotes frd
 \end_inset
 
@@ -1174,7 +1233,7 @@ annexfile{annex1}
 
 
 \backslash
-annexfile{annex2}
+annexfile{annex3}
 \begin_inset Quotes frd
 \end_inset
 
@@ -1187,7 +1246,7 @@ annexfile{annex2}
 
 
 \backslash
-annexfile{annex3}
+annexfile{annex4}
 \begin_inset Quotes frd
 \end_inset
 
@@ -1208,15 +1267,15 @@ annexfile{annex<n>}
 \end_layout
 
 \begin_layout Plain Layout
-e incluir os documentos 
-\end_layout
-
-\begin_layout Plain Layout
-annex2.lyx
+e incluir os documentos (Inserir - Ficheiro - Documento Filho)
 \end_layout
 
 \begin_layout Plain Layout
 annex3.lyx
+\end_layout
+
+\begin_layout Plain Layout
+annex4.lyx
 \end_layout
 
 \begin_layout Plain Layout
@@ -1244,6 +1303,13 @@ annexfile{annex1}
 
 
 \backslash
+appendixfile{annex2}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 printannexes
 \end_layout
 
@@ -1256,6 +1322,16 @@ printannexes
 \begin_inset CommandInset include
 LatexCommand input
 filename "annexes/annex1.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "annexes/annex2.lyx"
 
 \end_inset
 

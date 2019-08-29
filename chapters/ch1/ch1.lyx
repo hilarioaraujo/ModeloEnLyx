@@ -143,8 +143,48 @@ literal "false"
 \begin_layout Standard
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
+prefix "S"
+symbol "$P$"
+description "power \\nomunit{[\\si{\\watt} (\\si{\\joule\\per\\second})]}"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "$\\omega$"
+description "angular frequency \\nomunit{[\\si{\\radian}]}"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "SoFi"
+description "Soft Robotic Fish"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "C"
 symbol "API"
-description "Application inserte"
+description "Application Programming Interface"
 literal "false"
 
 \end_inset

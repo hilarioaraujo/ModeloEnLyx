@@ -143,8 +143,22 @@ literal "false"
 \begin_layout Standard
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
-symbol "API"
-description "Application inserte"
+prefix "S"
+symbol "$P$"
+description "power \\nomunit{[\\si{\\watt} (\\si{\\joule\\per\\second})]}"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "SoFi"
+description "Soft Robotic Fish"
 literal "false"
 
 \end_inset
@@ -153,12 +167,12 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-Api - aplicance
-\end_layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "C"
+symbol "API"
+description "Application Programming Interface"
+literal "false"
 
 \end_inset
 

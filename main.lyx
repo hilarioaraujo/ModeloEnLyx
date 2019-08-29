@@ -55,6 +55,39 @@
 
 
 %----------------------------------------------------------------------------------------
+%	List of Symbols, Abreviations, Symbols
+%----------------------------------------------------------------------------------------
+
+\usepackage{siunitx}
+\sisetup{%
+  inter-unit-product=\ensuremath{{}\cdot{}},
+  per-mode=symbol
+}
+
+\providecaptionname{english}{\abreviationsname}{Abreviations}
+\providecaptionname{portuguese}{\abreviationsname}{Abreviaturas}
+
+\providecaptionname{english}{\symbolsname}{Symbols}
+\providecaptionname{portuguese}{\symbolsname}{Símbolos}
+
+\providecaptionname{english}{\acronymsname}{Acronyms}
+\providecaptionname{portuguese}{\acronymsname}{Acrónimos}
+
+\renewcommand{\nomgroup}[1]{%
+  \ifthenelse{\equal{#1}{A}}{\item[\textbf{\Large \abreviationsname}]}{%
+  		\ifthenelse{\equal{#1}{C}}{\vspace{20pt} \item[\textbf{\Large \acronymsname}]}{%
+			\ifthenelse{\equal{#1}{S}}{\vspace{20pt} \item[\textbf{\Large \symbolsname}]}{%
+        			{}%
+    }%
+    }%
+    }%
+}%
+
+\newcommand{\nomunit}[1]{%
+  \renewcommand{\nomentryend}{\hspace*{\fill}\makebox[1cm][l]{#1}}%
+}
+
+%----------------------------------------------------------------------------------------
 %	CLASS OPTIONS
 %----------------------------------------------------------------------------------------
 \usepackage{parskip} % If the parskip option is passed to the class, require the parskip package 
@@ -628,6 +661,15 @@ authorname,pdftitle=
 ttitle,pdfkeywords=
 \backslash
 keywordnames}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand
+\backslash
+nomname{Lista de Abreviaturas, Acrónimos e Símbolos}
 \end_layout
 
 \end_inset
