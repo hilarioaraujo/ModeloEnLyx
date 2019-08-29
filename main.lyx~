@@ -84,7 +84,7 @@
 }%
 
 \newcommand{\nomunit}[1]{%
-  \renewcommand{\nomentryend}{\hspace*{\fill}#1}%
+  \renewcommand{\nomentryend}{\hspace*{\fill}\makebox[1cm][l]{#1}}%
 }
 
 %----------------------------------------------------------------------------------------

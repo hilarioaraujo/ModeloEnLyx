@@ -64,6 +64,9 @@
   per-mode=symbol
 }
 
+\providecaptionname{english}{\nomemname}{List of Abreviations, Acronyms and Symbols}
+\providecaptionname{portuguese}{\nomemname}{Lista de Abreviaturas, Acrónimos e Símbolos}
+
 \providecaptionname{english}{\abreviationsname}{Abreviations}
 \providecaptionname{portuguese}{\abreviationsname}{Abreviaturas}
 
@@ -74,9 +77,9 @@
 \providecaptionname{portuguese}{\acronymsname}{Acrónimos}
 
 \renewcommand{\nomgroup}[1]{%
-  \ifthenelse{\equal{#1}{A}}{\item[\textbf{\Large \abreviationsname}]}{%
-  		\ifthenelse{\equal{#1}{C}}{\vspace{20pt} \item[\textbf{\Large \acronymsname}]}{%
-			\ifthenelse{\equal{#1}{S}}{\vspace{20pt} \item[\textbf{\Large \symbolsname}]}{%
+  \ifthenelse{\equal{#1}{A}}{\centering \item[\textbf{\Large \abreviationsname}]}{%
+  		\ifthenelse{\equal{#1}{C}}{\vspace{20pt} \centering \item[\textbf{\Large \acronymsname}]}{%
+			\ifthenelse{\equal{#1}{S}}{\vspace{20pt} \centering \item[\textbf{\Large \symbolsname}]}{%
         			{}%
     }%
     }%
@@ -84,7 +87,7 @@
 }%
 
 \newcommand{\nomunit}[1]{%
-  \renewcommand{\nomentryend}{\hspace*{\fill}\makebox[1cm][l]{#1}}%
+  \renewcommand{\nomentryend}{\hspace*{1cm}#1}%
 }
 
 %----------------------------------------------------------------------------------------
@@ -669,7 +672,9 @@ keywordnames}
 \backslash
 renewcommand
 \backslash
-nomname{Lista de Abreviaturas, Acrónimos e Símbolos}
+nomname{
+\backslash
+nomemname}
 \end_layout
 
 \end_inset
