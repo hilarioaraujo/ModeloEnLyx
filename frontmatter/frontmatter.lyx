@@ -420,10 +420,6 @@ Após cada um dos resumos devem ser indicadas cinco palavras-chave – portuguê
 \end_layout
 
 \begin_layout Standard
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -546,21 +542,18 @@ status open
 
 
 \backslash
+bigskip   
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\backslash
 noindent 
-\end_layout
-
-\begin_layout Plain Layout
-
-
 \backslash
-newline 
-\end_layout
-
-\begin_layout Plain Layout
-
-
+bf 
 \backslash
-textbf{Key words: } 
+conkeywordslabel: } 
 \backslash
 text{keyword1, ..., keyword2}
 \end_layout

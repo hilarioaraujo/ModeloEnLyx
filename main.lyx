@@ -57,24 +57,13 @@
 %----------------------------------------------------------------------------------------
 %	List of Symbols, Abreviations, Symbols
 %----------------------------------------------------------------------------------------
+\renewcommand\nomname{\nomemname}
 
 \usepackage{siunitx}
 \sisetup{%
   inter-unit-product=\ensuremath{{}\cdot{}},
   per-mode=symbol
 }
-
-\providecaptionname{english}{\nomemname}{List of Abreviations, Acronyms and Symbols}
-\providecaptionname{portuguese}{\nomemname}{Lista de Abreviaturas, Acrónimos e Símbolos}
-
-\providecaptionname{english}{\abreviationsname}{Abreviations}
-\providecaptionname{portuguese}{\abreviationsname}{Abreviaturas}
-
-\providecaptionname{english}{\symbolsname}{Symbols}
-\providecaptionname{portuguese}{\symbolsname}{Símbolos}
-
-\providecaptionname{english}{\acronymsname}{Acronyms}
-\providecaptionname{portuguese}{\acronymsname}{Acrónimos}
 
 \renewcommand{\nomgroup}[1]{%
   \ifthenelse{\equal{#1}{A}}{\centering \item[\textbf{\Large \abreviationsname}]}{%
@@ -239,7 +228,28 @@ KOMA-script documentation for details.}]{fancyhdr}
   \gdef\annexname{Anexo}
   \gdef\annexnamepl{Anexos}
   \gdef\appendixnamepl{Apêndices}
+  \gdef\appendixname{Apêndice}
+  \gdef\epigraphlabel{Ep\'igrafe} % Portuguese 
+  \gdef\dedicationlabel{Dedicat\'oria} % Portuguese 
+  \gdef\keywordslabel{Palavras-chave} % Portuguese 
+  \gdef\abslabel{Resumo} % Portuguese 
+  \gdef\conkeywordslabel{Keywords} % Portuguese 
+  \gdef\abslabelotherlang{Abstract}  
+  \gdef\acknowledgementlabel{Agradecimentos}
+  \gdef\introductionlabel{Introdução}
+  \gdef\conclusionlabel{Conclusão}
+  \gdef\supervisorlabel{O Orientador}
+  \gdef\dissertationdisclamer{Disserta\c{c}\~ao para obten\c{c}\~ao do Grau de Mestre em \\ Ciências Militares Navais, na especialidade de} % Portuguese 
+  \gdef\cosupervisorlabel{O Co-Orientador}
+  \gdef\mestrandolabel{O Aluno Mestrando}
+  \gdef\orientationlabel{Orientação de}
+  \gdef\abreviationsname{Abreviaturas}
+  \gdef\nomemname{Lista de Abreviaturas, Acrónimos e Símbolos}
+  \gdef\symbolsname{Símbolos}
+  \gdef\acronymsname{Acrónimos}
 }
+
+
 
 \addto\captionsenglish{%
   \def\lstlistlistingname{Listings}%
@@ -247,6 +257,25 @@ KOMA-script documentation for details.}]{fancyhdr}
   \gdef\annexname{Annex}
   \gdef\annexnamepl{Annexes}
   \gdef\appendixnamepl{Appendices}
+  \gdef\appendixname{Appendice}
+  \gdef\epigraphlabel{Epigraph}
+  \gdef\dedicationlabel{Dedicatory}
+  \gdef\keywordslabel{Keywords}
+  \gdef\abslabel{Abstract}
+  \gdef\conkeywordslabel{Palavras-chave}
+  \gdef\abslabelotherlang{Resumo}
+  \gdef\acknowledgementlabel{Acknowledgement} % Acknowledgement text for English countries
+  \gdef\introductionlabel{Introduction} % introduction text for English countries
+  \gdef\conclusionlabel{Conclusion} % conclusion text for English countries
+  \gdef\supervisorlabel{The Supervisor}
+  \gdef\cosupervisorlabel{The Co-Supervisor}
+  \gdef\orientationlabel{Orientation of}
+  \gdef\mestrandolabel{The Master Student}
+  \gdef\dissertationdisclamer{A dissertation submitted in partial fulfillment of \\ the requirements for the degree of Marine Military Sciences, specialisation of}%
+  \gdef\nomemname{List of Abreviations, Acronyms and Symbols}
+  \gdef\symbolsname{Symbols}
+  \gdef\abreviationsname{Abreviations}
+  \gdef\acronymsname{Acronyms}
 }
 
 \renewcommand{\@pnumwidth}{2em} % Corrigir espaço para páginas com numeração romana na ToC
@@ -256,28 +285,19 @@ KOMA-script documentation for details.}]{fancyhdr}
 %----------------------------------------------------------------------------------------
 %	TITLEPAGE PAGE DESIGN
 %----------------------------------------------------------------------------------------
-\newcommand{\dissertationdisclamer}{A dissertation submitted in partial fulfilment of the \\ requirements for the degree of Marine Military Sciences, specialisation of}
-\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\dissertationdisclamer}{A dissertation submitted in partial fulfillment of \\ the requirements for the degree of Marine Military Sciences, specialisation of}
-\providecaptionname{portuguese}{\dissertationdisclamer}{Disserta\c{c}\~ao para obten\c{c}\~ao do Grau de Mestre em \\ Ciências Militares Navais, na especialidade de} % Portuguese 
-
+\newcommand{\dissertationdisclamer}{A dissertation submitted in partial fulfilment of the \\ requirements for the degree of Marine Military Sciences, specialisation of}%
 
 %----------------------------------------------------------------------------------------
 %	CONTRA - TITLEPAGE PAGE DESIGN
 %----------------------------------------------------------------------------------------
 \newcommand{\supervisorlabel}{Supervisor}
-\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\supervisorlabel}{Supervisor}
-\providecaptionname{portuguese}{\supervisorlabel}{Orientador}
 \newcommand{\cosupervisorlabel}{Co-Supervisor}
-\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\cosupervisorlabel}{Co-Supervisor}
-\providecaptionname{portuguese}{\cosupervisorlabel}{Co-Orientador}
-
-
+\newcommand{\mestrandolabel}{O Aluno Mestrando}
+\newcommand{\orientationlabel}{Orientação de}
 %----------------------------------------------------------------------------------------
 %	EPIGRAPH PAGE DESIGN
 %----------------------------------------------------------------------------------------
 \newcommand{\epigraphlabel}{Epigraph}
-\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\epigraphlabel}{Epigraph}
-\providecaptionname{portuguese}{\epigraphlabel}{Ep\'igrafe} % Portuguese 
 \newenvironment{epigraph}{
 	\checktoopen
 	\tttypeout{\epigraphlabel}
@@ -294,8 +314,6 @@ KOMA-script documentation for details.}]{fancyhdr}
 %----------------------------------------------------------------------------------------
 
 \newcommand{\dedicationlabel}{Dedicatory}
-\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\dedicationlabel}{Dedicatory}
-\providecaptionname{portuguese}{\dedicationlabel}{Dedicat\'oria} % Portuguese 
 \newenvironment{dedicatory}{
 	\checktoopen
 	\tttypeout{\dedicationlabel}
@@ -311,11 +329,10 @@ KOMA-script documentation for details.}]{fancyhdr}
 %----------------------------------------------------------------------------------------
 
 \newcommand{\abslabel}{Abstract}
-\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\abslabel}{Abstract}
-\providecaptionname{portuguese}{\abslabel}{Resumo} % Portuguese 
 \newcommand{\keywordslabel}{Keywords}
-\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\keywordslabel}{Keywords}
-\providecaptionname{portuguese}{\keywordslabel}{Palavras-chave} % Portuguese 
+
+\newcommand{\conkeywordslabel}{Keywords}
+
 \newenvironment{abstract}{
 	\checktoopen
 	\tttypeout{\abstractname}
@@ -330,8 +347,6 @@ KOMA-script documentation for details.}]{fancyhdr}
 
 
 \newcommand{\abslabelotherlang}{Resumo}
-\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\abslabelotherlang}{Resumo}
-\providecaptionname{portuguese}{\abslabelotherlang}{Abstract}  
 \newenvironment{abstractotherlanguage}{
 	\checktoopen
 	\tttypeout{\abslabel}
@@ -349,8 +364,6 @@ KOMA-script documentation for details.}]{fancyhdr}
 %----------------------------------------------------------------------------------------
 
 \newcommand{\acknowledgementlabel}{Acknowledgement}
-\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish} {\acknowledgementlabel}{Acknowledgement} % Acknowledgement text for English countries
-\providecaptionname{portuguese} {\acknowledgementlabel}{Agradecimentos}
 \newenvironment{acknowledgements}{
 	\tttypeout{\acknowledgementlabel}
 	\null\vfil
@@ -367,8 +380,6 @@ KOMA-script documentation for details.}]{fancyhdr}
 %	INTRODUCTION PAGE DESIGN
 %----------------------------------------------------------------------------------------
 \newcommand{\introductionlabel}{Introduction}
-\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish} {\introductionlabel}{Introduction} % introduction text for English countries
-\providecaptionname{portuguese} {\introductionlabel}{Introdução}
 \newenvironment{introduction}{
 	\checktoopen
 	\tttypeout{\introductionlabel}%
@@ -389,8 +400,6 @@ KOMA-script documentation for details.}]{fancyhdr}
 %	CONCLUSION PAGE DESIGN
 %----------------------------------------------------------------------------------------
 \newcommand{\conclusionlabel}{Conclusion}
-\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish} {\conclusionlabel}{Conclusion} % conclusion text for English countries
-\providecaptionname{portuguese} {\conclusionlabel}{Conclusão}
 \newenvironment{conclusion}{
 	\checktoopen
 	\tttypeout{\conclusionlabel}%
@@ -477,7 +486,7 @@ changebars
 \output_sync 1
 \output_sync_macro "\usepackage[active]{srcltx}"
 \bibtex_command biber
-\index_command makeindex
+\index_command default
 \float_placement H
 \paperfontsize 12
 \spacing single
@@ -530,7 +539,7 @@ changebars
 \is_math_indent 0
 \math_numbering_side default
 \quotes_style french
-\dynamic_quotes 0
+\dynamic_quotes 1
 \papercolumns 1
 \papersides 2
 \paperpagestyle default

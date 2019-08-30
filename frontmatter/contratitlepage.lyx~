@@ -348,7 +348,9 @@ textwidth}%
 
 		
 \backslash
-emph{O Aluno Mestrando,} 
+emph{
+\backslash
+mestrandolabel,} 
 \backslash
 
 \backslash
@@ -430,7 +432,9 @@ textwidth}%
 
 		
 \backslash
-emph{O Orientador,} 
+emph{
+\backslash
+supervisorlabel,} 
 \backslash
 
 \backslash
@@ -479,11 +483,6 @@ supname}
 \backslash
 end{picture} % Caso não tenha co-orientador comente daqui...
  
-\end_layout
-
-\begin_layout Plain Layout
-
-	
 \end_layout
 
 \end_inset
@@ -535,7 +534,9 @@ vspace{1cm}
 
 		
 \backslash
-emph{O Co-orientador,}
+emph{
+\backslash
+cosupervisorlabel,}
 \backslash
 
 \backslash
