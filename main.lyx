@@ -1318,7 +1318,7 @@ annexfile{annex1}
 
 
 \backslash
-appendixfile{annex2}
+annexfile{annex2}
 \end_layout
 
 \begin_layout Plain Layout
