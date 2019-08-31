@@ -66,9 +66,9 @@
 }
 
 \renewcommand{\nomgroup}[1]{%
-  \ifthenelse{\equal{#1}{A}}{\centering \item[\textbf{\Large \abreviationsname}]}{%
-  		\ifthenelse{\equal{#1}{C}}{\vspace{20pt} \centering \item[\textbf{\Large \acronymsname}]}{%
-			\ifthenelse{\equal{#1}{S}}{\vspace{20pt} \centering \item[\textbf{\Large \symbolsname}]}{%
+  \ifthenelse{\equal{#1}{A}}{\item[\textbf{\Large \abreviationsname}]}{%
+  		\ifthenelse{\equal{#1}{C}}{\vspace{20pt} \item[\textbf{\Large \acronymsname}]}{%
+			\ifthenelse{\equal{#1}{S}}{\vspace{20pt} \item[\textbf{\Large \symbolsname}]}{%
         			{}%
     }%
     }%
@@ -457,7 +457,7 @@ KOMA-script documentation for details.}]{fancyhdr}
   \gdef\thechapter{\@Roman\c@chapter}%
 }
 \end_preamble
-\options english
+\options portuguese
 \use_default_options false
 \master main.lyx
 \begin_modules
@@ -465,7 +465,7 @@ enumitem
 changebars
 \end_modules
 \maintain_unincluded_children false
-\language english
+\language portuguese
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -486,7 +486,7 @@ changebars
 \output_sync 1
 \output_sync_macro "\usepackage[active]{srcltx}"
 \bibtex_command biber
-\index_command makeindex
+\index_command default
 \float_placement H
 \paperfontsize 12
 \spacing single
@@ -538,8 +538,8 @@ changebars
 \paragraph_indentation 1.5cm
 \is_math_indent 0
 \math_numbering_side default
-\quotes_style english
-\dynamic_quotes 0
+\quotes_style french
+\dynamic_quotes 1
 \papercolumns 1
 \papersides 2
 \paperpagestyle default

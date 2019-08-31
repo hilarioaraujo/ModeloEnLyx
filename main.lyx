@@ -66,9 +66,9 @@
 }
 
 \renewcommand{\nomgroup}[1]{%
-  \ifthenelse{\equal{#1}{A}}{\centering \item[\textbf{\Large \abreviationsname}]}{%
-  		\ifthenelse{\equal{#1}{C}}{\vspace{20pt} \centering \item[\textbf{\Large \acronymsname}]}{%
-			\ifthenelse{\equal{#1}{S}}{\vspace{20pt} \centering \item[\textbf{\Large \symbolsname}]}{%
+  \ifthenelse{\equal{#1}{A}}{\item[\textbf{\Large \abreviationsname}]}{%
+  		\ifthenelse{\equal{#1}{C}}{\vspace{20pt} \item[\textbf{\Large \acronymsname}]}{%
+			\ifthenelse{\equal{#1}{S}}{\vspace{20pt} \item[\textbf{\Large \symbolsname}]}{%
         			{}%
     }%
     }%
@@ -214,6 +214,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 \newcommand*{\university}[1]{\def\univname{#1}}
 \newcommand*{\department}[1]{\def\deptname{#1}}
 \newcommand*{\keywords}[1]{\def\keywordnames{#1}}
+\newcommand*{\conkeywords}[1]{\def\conkeywordnames{#1}}
 
 %----------------------------------------------------------------------------------------
 %	TOC BABEL CORRECTIONS - PORTUGAL

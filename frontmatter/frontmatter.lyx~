@@ -438,7 +438,7 @@ noindent
 \backslash
 bf 
 \backslash
-keywordslabel:} {
+keywordslabel: } {
 \backslash
 keywordnames}
 \end_layout
@@ -542,25 +542,20 @@ status open
 
 
 \backslash
+bigskip   
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\backslash
 noindent 
-\end_layout
-
-\begin_layout Plain Layout
-
-
 \backslash
-newline 
-\end_layout
-
-\begin_layout Plain Layout
-
-
+bf 
 \backslash
-textbf{
+conkeywordslabel: } {
 \backslash
-conkeywordslabel: } 
-\backslash
-text{keyword1, ..., keyword2}
+conkeywordnames}
 \end_layout
 
 \end_inset
