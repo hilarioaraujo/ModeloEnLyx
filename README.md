@@ -49,4 +49,5 @@ Make sure you have the following tools installed: **pdflatex**, **makeglossaries
 * Ricardo Moura (ricardo.pinto.moura@marinha.pt)
 
 Some tutorials about lyx: https://www.youtube.com/playlist?list=PLB6oieQ9gzTRIkCI_P53BJT5BtUpmkORQ
+
 Some tutorials about this model in lyx: https://www.youtube.com/playlist?list=PLB6oieQ9gzTTdzLAh4Sh2oUMSQ8OZCvaO
