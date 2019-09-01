@@ -15,7 +15,6 @@ Just fork the repository and use it. You will need LaTeX tools installed in your
 
 LaTeX is available for many systems including Windows, Linux and Mac OS X. Check the webpage for the LaTex project for more information: <https://latex-project.org/ftp.html>.
 
-Make sure you have the following tools installed: **pdflatex**, **makeglossaries**, **biber**, **latexmk**.
 
 ### LaTeX Packages Needed
 
