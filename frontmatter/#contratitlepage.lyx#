@@ -115,7 +115,11 @@ status open
 
 
 \backslash
-begin{titlepage}
+pagestyle{empty}
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -652,13 +656,6 @@ tdate} % Date
 
 \backslash
 end{center} 
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{titlepage}
 \end_layout
 
 \end_inset

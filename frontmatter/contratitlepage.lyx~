@@ -115,13 +115,6 @@ status open
 
 
 \backslash
-titlingpage  	
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
 AddToShipoutPicture*{             
 \end_layout
 
@@ -305,7 +298,9 @@ end{center}
 \backslash
 large 
 \backslash
-bfseries Orientação de: 
+bfseries 
+\backslash
+orientationlabel: 
 \backslash
 supname} 
 \end_layout
