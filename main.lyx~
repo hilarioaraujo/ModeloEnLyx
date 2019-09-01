@@ -9,6 +9,8 @@
 %----------------------------------------------------------------------------------------
 %	REQUIRED PACKAGES
 %----------------------------------------------------------------------------------------
+\usepackage{float}
+\usepackage{eurosym}
 
 \usepackage{titling}
 \usepackage{eso-pic}
@@ -52,6 +54,12 @@
 
 \usepackage[centerlast,small,sc]{caption} % Required for customising the captions
 \setlength{\captionmargin}{50pt}
+
+
+%----------------------------------------------------------------------------------------
+%	FootNotes
+%----------------------------------------------------------------------------------------
+\usepackage{footnotebackref}
 
 
 %----------------------------------------------------------------------------------------
@@ -161,7 +169,9 @@
 	\ofoot[\ttitle/\authorname]{\ttitle/\authorname}
 	\ifoot[\today]{\today}
 }
+
 \pagestyle{thesis}
+
 \KOMAoption{headsepline}{true}{}
 \PreventPackageFromLoading[\ClassError{\classname}{Package `fancyhdr' is
 incompatible\MessageBreak with this class}{The pagesyles are defined 
@@ -192,7 +202,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 
 \setcounter{tocdepth}{3} % The depth to which the document sections are printed to the table of contents
 \providecommand\addchaptertocentry[1]{%
-\ifdef{\phantomsection}{\phantomsection}{}% The \phantomsection command is necessary for hyperref to jump to the correct page
+\phantomsection{}% The \phantomsection command is necessary for hyperref to jump to the correct page
 \addcontentsline{toc}{chapter}{#1}%
 }
 
@@ -214,6 +224,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 \newcommand*{\university}[1]{\def\univname{#1}}
 \newcommand*{\department}[1]{\def\deptname{#1}}
 \newcommand*{\keywords}[1]{\def\keywordnames{#1}}
+\newcommand*{\conkeywords}[1]{\def\conkeywordnames{#1}}
 
 %----------------------------------------------------------------------------------------
 %	TOC BABEL CORRECTIONS - PORTUGAL
@@ -500,6 +511,7 @@ changebars
 \pdf_colorlinks false
 \pdf_backref false
 \pdf_pdfusetitle false
+\pdf_quoted_options "hyperfootnotes=false"
 \papersize a4paper
 \use_geometry true
 \use_package amsmath 1
@@ -715,7 +727,7 @@ status open
 
 
 \backslash
-pagestyle{plain}
+pagestyle{thesis}
 \end_layout
 
 \end_inset
@@ -781,6 +793,34 @@ Apartir daqui poderá eliminar os respetibos indices caso não pretenda que
 \begin_layout Standard
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pdfbookmark[0]{
+\backslash
+contentsname}{toc}% 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Adiciona o índice aos bookmarks do pdf
+\end_layout
 
 \end_inset
 
@@ -1317,7 +1357,7 @@ annexfile{annex1}
 
 
 \backslash
-appendixfile{annex2}
+annexfile{annex2}
 \end_layout
 
 \begin_layout Plain Layout
