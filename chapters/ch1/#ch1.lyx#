@@ -120,9 +120,6 @@ Não é possível apresentar um critério único para o ordenamento de capítulo
  e subcapítulos, decorrendo esta estrutura da natureza do próprio trabalho,
  variando consoante a área disciplinar ou científica do mesmo e das suas
  características próprias.
-\backslash
-
-\backslash
  Nalguns casos terá uma natureza explicativa, noutros passará pela exposição
  de resultados e sua interpretação, envolvendo a apresentação de critérios,
  tabelas de resultados, memória descritiva, etc.
@@ -216,18 +213,19 @@ dasdasdasdasd asd asdasd asd asd asd
 \end_layout
 
 \begin_layout Standard
-sadasdas
+Exemplo de numenclatura:
 \end_layout
 
-\begin_layout Standard
-sadasdas
+\begin_layout Enumerate
+Simbolos:
 \end_layout
 
-\begin_layout Standard
-sadas
-\end_layout
+\begin_layout Enumerate
+O 
+\begin_inset Formula $P$
+\end_inset
 
-\begin_layout Standard
+ reprentao o símbolo de potência.
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "S"
@@ -241,6 +239,11 @@ literal "true"
 \end_layout
 
 \begin_layout Standard
+O 
+\begin_inset Formula $\omega$
+\end_inset
+
+ representa a frequência angular.
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "S"

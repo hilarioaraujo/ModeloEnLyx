@@ -148,83 +148,22 @@ dasdasdasdasd asd asdasd asd asd asd
 \end_layout
 
 \begin_layout Standard
-\begin_inset Foot
-status open
 
-\begin_layout Plain Layout
-dasdasdasdasd asd asdasd asd asd asd
+\series bold
+Exemplo de numenclatura:
 \end_layout
 
+\begin_layout Enumerate
+Simbolos:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+O 
+\begin_inset Formula $P$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-dasdasdasdasd asd asdasd asd asd asd
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-dasdasdasdasd asd asdasd asd asd asd
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-dasdasdasdasd asd asdasd asd asd asd
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-dasdasdasdasd asd asdasd asd asd asd
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-sadasdas
-\end_layout
-
-\begin_layout Standard
-sadasdas
-\end_layout
-
-\begin_layout Standard
-sadas
-\end_layout
-
-\begin_layout Standard
+ reprentao o símbolo de potência.
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "S"
@@ -237,7 +176,12 @@ literal "true"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
+O 
+\begin_inset Formula $\omega$
+\end_inset
+
+ representa a frequência angular.
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "S"
@@ -250,7 +194,18 @@ literal "true"
 
 \end_layout
 
-\begin_layout Standard
+\end_deeper
+\begin_layout Enumerate
+Abreviaturas:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+O 
+\shape italic
+Soft Robotic Fich
+\shape default
+ (SoFi)
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "A"
@@ -260,16 +215,87 @@ literal "false"
 
 \end_inset
 
+ é um BUV desenvolvido pelo MIT como se poderá ver pela figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:SoFi"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Acrónimos:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+O 
+\shape italic
+Biomimetic Underwater Vehicle
+\shape default
+ (BUV)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "C"
+symbol "BUV"
+description "Biomimetic Underwater Vehicle"
+literal "false"
+
+\end_inset
+
+ é...
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-prefix "C"
-symbol "API"
-description "Application Programming Interface"
-literal "false"
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename assets/SoFi1.png
+	lyxscale 70
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+SoFi
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:SoFi"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 

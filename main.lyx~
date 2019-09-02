@@ -727,7 +727,7 @@ status open
 
 
 \backslash
-pagestyle{thesis}
+pagestyle{empty}
 \end_layout
 
 \end_inset
@@ -749,6 +749,22 @@ filename "frontmatter/titlepage.lyx"
 \begin_inset CommandInset include
 LatexCommand input
 filename "frontmatter/contratitlepage.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagestyle{thesis}
+\end_layout
 
 \end_inset
 

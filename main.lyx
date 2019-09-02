@@ -474,6 +474,8 @@ KOMA-script documentation for details.}]{fancyhdr}
 \begin_modules
 enumitem
 changebars
+pdfform
+pdfcomment
 \end_modules
 \maintain_unincluded_children false
 \language portuguese
@@ -498,7 +500,7 @@ changebars
 \output_sync_macro "\usepackage[active]{srcltx}"
 \bibtex_command biber
 \index_command default
-\float_placement H
+\float_placement h
 \paperfontsize 12
 \spacing single
 \use_hyperref true

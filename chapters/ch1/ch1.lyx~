@@ -120,9 +120,6 @@ Não é possível apresentar um critério único para o ordenamento de capítulo
  e subcapítulos, decorrendo esta estrutura da natureza do próprio trabalho,
  variando consoante a área disciplinar ou científica do mesmo e das suas
  características próprias.
-\backslash
-
-\backslash
  Nalguns casos terá uma natureza explicativa, noutros passará pela exposição
  de resultados e sua interpretação, envolvendo a apresentação de critérios,
  tabelas de resultados, memória descritiva, etc.
@@ -151,83 +148,22 @@ dasdasdasdasd asd asdasd asd asd asd
 \end_layout
 
 \begin_layout Standard
-\begin_inset Foot
-status open
 
-\begin_layout Plain Layout
-dasdasdasdasd asd asdasd asd asd asd
+\series bold
+Exemplo de numenclatura:
 \end_layout
 
+\begin_layout Enumerate
+Simbolos:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+O 
+\begin_inset Formula $P$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-dasdasdasdasd asd asdasd asd asd asd
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-dasdasdasdasd asd asdasd asd asd asd
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-dasdasdasdasd asd asdasd asd asd asd
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-dasdasdasdasd asd asdasd asd asd asd
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-sadasdas
-\end_layout
-
-\begin_layout Standard
-sadasdas
-\end_layout
-
-\begin_layout Standard
-sadas
-\end_layout
-
-\begin_layout Standard
+ reprentao o símbolo de potência.
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "S"
@@ -240,7 +176,12 @@ literal "true"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
+O 
+\begin_inset Formula $\omega$
+\end_inset
+
+ representa a frequência angular.
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "S"
@@ -253,7 +194,18 @@ literal "true"
 
 \end_layout
 
-\begin_layout Standard
+\end_deeper
+\begin_layout Enumerate
+Abreviaturas:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+O 
+\shape italic
+Soft Robotic Fich
+\shape default
+ (SoFi)
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "A"
@@ -263,21 +215,33 @@ literal "false"
 
 \end_inset
 
-
+ é um BUV desenvolvido pelo MIT.
 \end_layout
 
-\begin_layout Standard
+\end_deeper
+\begin_layout Enumerate
+Acrónimos:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+O 
+\shape italic
+Biomimetic Underwater Vehicle
+\shape default
+ (BUV)
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "C"
-symbol "API"
-description "Application Programming Interface"
+symbol "BUV"
+description "Biomimetic Underwater Vehicle"
 literal "false"
 
 \end_inset
 
-
+ é...
 \end_layout
 
+\end_deeper
 \end_body
 \end_document
