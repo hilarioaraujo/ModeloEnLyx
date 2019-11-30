@@ -1,0 +1,10 @@
+Spell Checker:
+Copie os arquivos da pasta "Spell Checker" para o o caminho - C:\Program Files (x86)\LyX 2.3\Resources\dicts, e caso exista algum ficheiro com o mesmo nome substitua.
+
+Thesaurus:
+Copie os arquivos da pasta "Thesaurus" para o o caminho - C:\Program Files (x86)\LyX 2.3\Resources\thes, e caso exista algum ficheiro com o mesmo nome substitua.
+
+Link para download da nova versão:
+Spell Checker: https://www.lyx.org/trac/browser/lyxsvn/dictionaries/trunk/dicts
+Thesaurus: https://www.lyx.org/trac/browser/lyxsvn/dictionaries/trunk/thes
+Outros dicionários lyx (linux): https://www.lyx.org/AdditionalSoftware
