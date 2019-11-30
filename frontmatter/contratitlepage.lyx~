@@ -115,6 +115,13 @@ status open
 
 
 \backslash
+begin{titlepage}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 AddToShipoutPicture*{             
 \end_layout
 
@@ -645,6 +652,13 @@ tdate} % Date
 
 \backslash
 end{center} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{titlepage}
 \end_layout
 
 \end_inset

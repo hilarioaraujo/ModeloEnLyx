@@ -182,9 +182,7 @@ status open
 
 
 \backslash
-author{Nome do 
-\backslash
-textsc{Orientando}}
+author{Nome completo do Orientando}
 \end_layout
 
 \end_inset
@@ -194,8 +192,37 @@ textsc{Orientando}}
 status open
 
 \begin_layout Plain Layout
-Escreva o seu nome, pode referenciar o autor ao longa da dissertação utilizando
- o comando (
+Escreva o seu nome completo, pode referenciar o autor ao longa da dissertação
+ utilizando o comando (
+\backslash
+authorname)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+authorshort{Primeiro e último nomes do Orientando}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Escreva o seu primeiro e último nome, pode referenciar o autor ao longa
+ da dissertação utilizando o comando (
 \backslash
 authorname)
 \end_layout
@@ -247,9 +274,7 @@ status open
 
 
 \backslash
-supervisor{Nome do 
-\backslash
-textsc{Orientador}}
+supervisor{Nome do Orientador}
 \end_layout
 
 \end_inset
@@ -279,9 +304,7 @@ status open
 
 \backslash
 cosupervisor{Dr.
- Jack 
-\backslash
-textsc{Smith}}
+ Jack Smith}
 \end_layout
 
 \end_inset
