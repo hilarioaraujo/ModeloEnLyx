@@ -256,7 +256,8 @@ KOMA-script documentation for details.}]{fancyhdr}
   \gdef\dissertationdisclamer{Disserta\c{c}\~ao para obten\c{c}\~ao do Grau de Mestre em \\ Ciências Militares Navais, na especialidade de} % Portuguese 
   \gdef\cosupervisorlabel{O Co-Orientador}
   \gdef\mestrandolabel{O Aluno Mestrando}
-  \gdef\orientationlabel{Orientação de}
+  \gdef\orientationlabel{Orientação de: }
+  \gdef\coorientationlabel{Co-orientação de: }
   \gdef\abreviationsname{Abreviaturas}
   \gdef\nomemname{Lista de Abreviaturas, Acrónimos e Símbolos}
   \gdef\symbolsname{Símbolos}
@@ -283,7 +284,8 @@ KOMA-script documentation for details.}]{fancyhdr}
   \gdef\conclusionlabel{Conclusion} % conclusion text for English countries
   \gdef\supervisorlabel{The Supervisor}
   \gdef\cosupervisorlabel{The Co-Supervisor}
-  \gdef\orientationlabel{Orientation of}
+  \gdef\orientationlabel{Orientation of: }
+  \gdef\coorientationlabel{Co-orientation of: }
   \gdef\mestrandolabel{The Master Student}
   \gdef\dissertationdisclamer{A dissertation submitted in partial fulfillment of \\ the requirements for the degree of Marine Military Sciences, specialisation of}%
   \gdef\nomemname{List of Abreviations, Acronyms and Symbols}
@@ -304,12 +306,11 @@ KOMA-script documentation for details.}]{fancyhdr}
 %----------------------------------------------------------------------------------------
 %	CONTRA - TITLEPAGE PAGE DESIGN
 %----------------------------------------------------------------------------------------
-\newcommand{\supervisorlabel}{Supervisor}
-\newcommand{\supervisorshortlabel}{Supervisorshort}
-\newcommand{\cosupervisorlabel}{Co-Supervisor}
-\newcommand{\cosupervisorshortlabel}{Co-Supervisorshort}
+\newcommand{\supervisorlabel}{Orientador}
+\newcommand{\cosupervisorlabel}{Co-orientador}
 \newcommand{\mestrandolabel}{O Aluno Mestrando}
-\newcommand{\orientationlabel}{Orientação de}
+\newcommand{\orientationlabel}{Orientação de: }
+\newcommand{\coorientationlabel}{Co-orientação de: }
 %----------------------------------------------------------------------------------------
 %	EPIGRAPH PAGE DESIGN
 %----------------------------------------------------------------------------------------

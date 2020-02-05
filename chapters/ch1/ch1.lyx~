@@ -215,7 +215,17 @@ literal "false"
 
 \end_inset
 
- é um BUV desenvolvido pelo MIT.
+ é um BUV desenvolvido pelo MIT como se poderá ver pela figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:SoFi"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -243,5 +253,54 @@ literal "false"
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename assets/SoFi1.png
+	lyxscale 70
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+SoFi
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:SoFi"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
