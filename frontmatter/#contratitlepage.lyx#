@@ -115,11 +115,7 @@ status open
 
 
 \backslash
-pagestyle{empty}
-\end_layout
-
-\begin_layout Plain Layout
-
+begin{titlepage}
 \end_layout
 
 \begin_layout Plain Layout
@@ -311,9 +307,32 @@ large
 \backslash
 bfseries 
 \backslash
-orientationlabel: 
+orientationlabel 
 \backslash
 supname} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\backslash
+ifdefined
+\backslash
+tsubtitle {
+\backslash
+indent 
+\backslash
+large 
+\backslash
+bfseries 
+\backslash
+coorientationlabel 
+\backslash
+cosupname}}
 \end_layout
 
 \begin_layout Plain Layout
@@ -396,7 +415,7 @@ linewidth}{0.5mm}}
 \backslash
 put(0,-22.5){
 \backslash
-authorname}  
+authorshortname}  
 \end_layout
 
 \begin_layout Plain Layout
@@ -480,7 +499,7 @@ linewidth}{0.5mm}}
 \backslash
 put(0,-22.5){
 \backslash
-supname}  
+supsname}  
 \end_layout
 
 \begin_layout Plain Layout
@@ -582,7 +601,7 @@ linewidth}{0.5mm}}
 \backslash
 put(0,-22.5){
 \backslash
-cosupname}  
+cosupsname}  
 \end_layout
 
 \begin_layout Plain Layout
@@ -656,6 +675,13 @@ tdate} % Date
 
 \backslash
 end{center} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{titlepage}
 \end_layout
 
 \end_inset

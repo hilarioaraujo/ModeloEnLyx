@@ -89,13 +89,6 @@ status open
 
 
 \backslash
-titlingpage
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
 AddToShipoutPicture*{         
 \end_layout
 

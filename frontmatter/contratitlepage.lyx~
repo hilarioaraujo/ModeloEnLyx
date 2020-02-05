@@ -309,7 +309,24 @@ bfseries
 \backslash
 orientationlabel: 
 \backslash
-supname} 
+supname}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ifdefined
+\backslash
+tsubtitle {
+\backslash
+large 
+\backslash
+bfseries 
+\backslash
+coorientationlabel: 
+\backslash
+cosupname}
 \end_layout
 
 \begin_layout Plain Layout
@@ -392,7 +409,7 @@ linewidth}{0.5mm}}
 \backslash
 put(0,-22.5){
 \backslash
-authorname}  
+authorshortname}  
 \end_layout
 
 \begin_layout Plain Layout
@@ -476,7 +493,7 @@ linewidth}{0.5mm}}
 \backslash
 put(0,-22.5){
 \backslash
-supname}  
+supsname}  
 \end_layout
 
 \begin_layout Plain Layout
@@ -578,7 +595,7 @@ linewidth}{0.5mm}}
 \backslash
 put(0,-22.5){
 \backslash
-cosupname}  
+cosupsname}  
 \end_layout
 
 \begin_layout Plain Layout
