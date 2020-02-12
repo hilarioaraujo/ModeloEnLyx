@@ -307,26 +307,36 @@ large
 \backslash
 bfseries 
 \backslash
-orientationlabel: 
+orientationlabel 
+\backslash
+mdseries 
 \backslash
 supname}
 \end_layout
 
 \begin_layout Plain Layout
 
-
+{
 \backslash
 ifdefined
 \backslash
 tsubtitle {
 \backslash
+
+\backslash
+ 
+\backslash
+indent 
+\backslash
 large 
 \backslash
 bfseries 
 \backslash
-coorientationlabel: 
+coorientationlabel 
 \backslash
-cosupname}
+mdseries 
+\backslash
+cosupname}}
 \end_layout
 
 \begin_layout Plain Layout

@@ -320,7 +320,7 @@ supname}
 \backslash
 ifdefined
 \backslash
-tsubtitle {
+cosupsname {
 \backslash
 
 \backslash
