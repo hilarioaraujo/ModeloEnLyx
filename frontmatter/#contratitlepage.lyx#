@@ -309,11 +309,9 @@ bfseries
 \backslash
 orientationlabel 
 \backslash
-supname} 
+mdseries 
 \backslash
-
-\backslash
-
+supname}
 \end_layout
 
 \begin_layout Plain Layout
@@ -322,7 +320,11 @@ supname}
 \backslash
 ifdefined
 \backslash
-tsubtitle {
+cosupname {
+\backslash
+
+\backslash
+ 
 \backslash
 indent 
 \backslash
@@ -331,6 +333,8 @@ large
 bfseries 
 \backslash
 coorientationlabel 
+\backslash
+mdseries 
 \backslash
 cosupname}}
 \end_layout

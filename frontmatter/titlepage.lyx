@@ -223,7 +223,11 @@ large
 \backslash
 bfseries 
 \backslash
-tsubtitle} 
+tsubtitle}
+\backslash
+
+\backslash
+ 
 \backslash
 fi 
 \end_layout
