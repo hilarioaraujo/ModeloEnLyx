@@ -235,12 +235,14 @@ KOMA-script documentation for details.}]{fancyhdr}
 \addto\captionsportuguese{%
   \def\contentsname{Índice}%
   \def\indexname{Índice Remissivo}%
-  \def\lstlistlistingname{Listagens}%
-  \def\lstlistingname{Listagem}%
   \defineshorthand{"-}{\babelhyphen{repeat}}% generates a hyphen that will repeat on a new line
   \gdef\annexname{Anexo}
   \gdef\annexnamepl{Anexos}
   \gdef\appendixnamepl{Apêndices}
+  \gdef\lstlistlistingname{Lista de Código Fonte}%
+  \gdef\lstlistingname{Código Fonte}%
+  \gdef\listalgorithmname{Lista de Algoritmos}%
+  \gdef\algorithmname{Algoritmo}%
   \gdef\appendixname{Apêndice}
   \gdef\epigraphlabel{Ep\'igrafe} % Portuguese 
   \gdef\dedicationlabel{Dedicat\'oria} % Portuguese 
@@ -266,8 +268,6 @@ KOMA-script documentation for details.}]{fancyhdr}
 
 
 \addto\captionsenglish{%
-  \def\lstlistlistingname{Listings}%
-  \def\lstlistingname{Listing}%
   \gdef\annexname{Annex}
   \gdef\annexnamepl{Annexes}
   \gdef\appendixnamepl{Appendices}
@@ -291,11 +291,13 @@ KOMA-script documentation for details.}]{fancyhdr}
   \gdef\symbolsname{Symbols}
   \gdef\abreviationsname{Abreviations}
   \gdef\acronymsname{Acronyms}
+  \gdef\lstlistlistingname{List of Source Code}%
+  \gdef\lstlistingname{Source Code}%
+  \gdef\listalgorithmname{List of Algorithms}%
+  \gdef\algorithmname{Algorithm}%
 }
 
 \renewcommand{\@pnumwidth}{2em} % Corrigir espaço para páginas com numeração romana na ToC
-
-
 
 %----------------------------------------------------------------------------------------
 %	TITLEPAGE PAGE DESIGN
