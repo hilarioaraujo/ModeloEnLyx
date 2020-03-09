@@ -1,8 +1,8 @@
 # README #
 
-*EN Dissertation  Lyx - LaTeX Template - Version 0.1 (JUL/2019)*
+*ThesisENStyle Lyx - LaTeX Template - Version 0.1 (JUL/2019)*
 
-This template explains the main formatting rules to apply to a Master Dissertation work for EN.
+This template explains the main formatting rules to apply to a Master Dissertation work for Portuguese Naval Academy.
 
 **You can fork this repository to make your own dissertation based on this template.**
 
@@ -53,3 +53,7 @@ LaTeX is available for many systems including Windows, Linux and Mac OS X. Check
 *Some tutorials about this model in lyx: https://www.youtube.com/playlist?list=PLB6oieQ9gzTTdzLAh4Sh2oUMSQ8OZCvaO
 
 *Lyx webpage: https://www.lyx.org/
+
+*Lyx webpage examples:https://wiki.lyx.org/Examples/Thesis
+
+*Lyx webpage project ThesisENStyle :https://wiki.lyx.org/Examples/ThesisENStyle
