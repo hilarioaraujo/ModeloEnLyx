@@ -210,8 +210,8 @@ Soft Robotic Fich
 LatexCommand nomenclature
 prefix "A"
 symbol "SoFi"
-description "Soft Robotic Fish"
-literal "false"
+description "\\textit{Soft Robotic Fish}"
+literal "true"
 
 \end_inset
 
@@ -244,8 +244,8 @@ Biomimetic Underwater Vehicle
 LatexCommand nomenclature
 prefix "C"
 symbol "BUV"
-description "Biomimetic Underwater Vehicle"
-literal "false"
+description "\\textit{Biomimetic Underwater Vehicle}"
+literal "true"
 
 \end_inset
 

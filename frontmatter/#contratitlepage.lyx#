@@ -244,9 +244,9 @@ vspace{1.5cm}
 
 	
 \backslash
-ifdefined
+ifdefined{
 \backslash
-tsubtitle {
+tsubtitle} {
 \backslash
 large 
 \backslash
@@ -256,16 +256,14 @@ tsubtitle}
 \backslash
 
 \backslash
- 
-\backslash
-fi % Thesis sub title, if exists
+	
 \end_layout
 
 \begin_layout Plain Layout
 
 	
 \backslash
-vspace{1.5cm}     	
+vfill
 \end_layout
 
 \begin_layout Plain Layout

@@ -274,7 +274,7 @@ status open
 
 
 \backslash
-supervisor{Nome do Orientador}
+supervisor{Professor Duarte Damas}
 \end_layout
 
 \end_inset
@@ -284,10 +284,40 @@ supervisor{Nome do Orientador}
 status open
 
 \begin_layout Plain Layout
-O nome do seu supervisor, isto é usado na página da contra capa, poderá
- referenciar-lo ao longo do seu trabalho com o comando (
+Título e nome do seu orientador (pode ser o nome completo ou o 1º e último),
+ isto é usado na página da contra capa, poderá referenciar-lo ao longo do
+ seu trabalho com o comando (
 \backslash
 supname)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+supervisorshort{Duarte Damas}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Nome do seu orientador (1º e último), isto é usado na página da contra capa,
+ poderá referenciar-lo ao longo do seu trabalho com o comando (
+\backslash
+supsname)
 \end_layout
 
 \end_inset
@@ -327,6 +357,35 @@ Caso tenha co-orientador, retire o símbolo
  seu trabalho com o comando (
 \backslash
 cosupname)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cosupervisorshort{Jack Smith}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Nome do seu co-orientador (1º e último), isto é usado na página da contra
+ capa, poderá referenciar-lo ao longo do seu trabalho com o comando (
+\backslash
+cosupsname)
 \end_layout
 
 \end_inset

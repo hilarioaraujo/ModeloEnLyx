@@ -505,7 +505,7 @@ pdfcomment
 \default_output_format pdf2
 \output_sync 1
 \output_sync_macro "\usepackage[active]{srcltx}"
-\bibtex_command biber
+\bibtex_command bibtex
 \index_command default
 \float_placement h
 \paperfontsize 12
@@ -533,11 +533,9 @@ pdfcomment
 \use_package stackrel 1
 \use_package stmaryrd 1
 \use_package undertilde 1
-\cite_engine biblatex
+\cite_engine natbib
 \cite_engine_type authoryear
 \biblio_style plainnat
-\biblatex_bibstyle apa
-\biblatex_citestyle apa
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -1032,7 +1030,7 @@ fia.
 LatexCommand bibtex
 btprint "btPrintCited"
 bibfiles "mainbibliography"
-options "bibtotoc"
+options "bibtotoc,apalike2"
 
 \end_inset
 

@@ -246,26 +246,24 @@ vspace{1.5cm}
 \backslash
 ifdefined
 \backslash
-tsubtitle {
+@tsubtitle 
 \backslash
 large 
 \backslash
 bfseries 
 \backslash
-tsubtitle} 
+tsubtitle 
 \backslash
 
 \backslash
- 
-\backslash
-fi % Thesis sub title, if exists
+	
 \end_layout
 
 \begin_layout Plain Layout
 
 	
 \backslash
-vspace{1.5cm}     	
+vfill
 \end_layout
 
 \begin_layout Plain Layout
@@ -320,7 +318,7 @@ supname}
 \backslash
 ifdefined
 \backslash
-cosupsname {
+cosupname {
 \backslash
 
 \backslash

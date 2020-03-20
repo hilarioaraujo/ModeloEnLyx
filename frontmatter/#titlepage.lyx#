@@ -217,13 +217,13 @@ vspace{1.5cm}
 \backslash
 ifdefined
 \backslash
-@tsubtitle 
+tsubtitle {
 \backslash
 large 
 \backslash
 bfseries 
 \backslash
-tsubtitle 
+tsubtitle} 
 \backslash
 
 \backslash
