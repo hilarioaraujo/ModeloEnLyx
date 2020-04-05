@@ -10,13 +10,12 @@
 %	REQUIRED PACKAGES
 %----------------------------------------------------------------------------------------
 \usepackage{eurosym}
-
 \usepackage{titling}
 \usepackage{eso-pic}
 
 \usepackage{etoolbox}
 \usepackage{xparse}
-
+\usepackage{hyphenat}
 \usepackage{ifthen}
 
 \usepackage{babel} % Required for automatically changing names of document elements to languages besides english
@@ -49,7 +48,7 @@
 
 
 %\RequirePackage[utf8]{inputenc} % Required for inputting portuguese characters
-%\RequirePackage[T1]{fontenc} % Output font encoding for portuguese characters
+\RequirePackage[T1]{fontenc} % Output font encoding for portuguese characters
 
 \usepackage[centerlast,small,sc]{caption} % Required for customising the captions
 \setlength{\captionmargin}{50pt}
@@ -62,7 +61,7 @@
 
 
 %----------------------------------------------------------------------------------------
-%	List of Symbols, Abreviations, Symbols
+%	List Abreviations, Symbols and Acronims
 %----------------------------------------------------------------------------------------
 \renewcommand\nomname{\nomemname}
 
@@ -83,8 +82,18 @@
 }%
 
 \newcommand{\nomunit}[1]{%
-  \renewcommand{\nomentryend}{\hspace*{1cm}#1}%
+  \renewcommand{\nomentryend}{\hspace*{\fill}[#1]\nolinebreak\hspace*{2cm}\mbox{}}%
 }
+
+%----------------------------------------------------------------------------------------
+%	List of Equation
+%----------------------------------------------------------------------------------------
+
+\newcommand{\listequationsname}{List of Equations}
+\newlistof{myequations}{equ}{\listequationsname}
+\newcommand{\myequations}[1]{%
+\addcontentsline{equ}{myequations}{\protect\numberline{\theequation}#1}}
+\setlength{\cftmyequationsnumwidth}{3em}
 
 %----------------------------------------------------------------------------------------
 %	CLASS OPTIONS
@@ -233,6 +242,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 %----------------------------------------------------------------------------------------
 
 \addto\captionsportuguese{%
+  \gdef\listequationsname{Lista de Equações}
   \def\contentsname{Índice}%
   \def\indexname{Índice Remissivo}%
   \defineshorthand{"-}{\babelhyphen{repeat}}% generates a hyphen that will repeat on a new line
@@ -268,6 +278,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 
 
 \addto\captionsenglish{%
+  \gdef\listequationsname{List of Equations}
   \gdef\annexname{Annex}
   \gdef\annexnamepl{Annexes}
   \gdef\appendixnamepl{Appendices}
@@ -399,12 +410,8 @@ KOMA-script documentation for details.}]{fancyhdr}
 %----------------------------------------------------------------------------------------
 \newcommand{\introductionlabel}{Introduction}
 \newenvironment{introduction}{
-	\checktoopen
 	\tttypeout{\introductionlabel}%
 	\addchaptertocentry{\introductionlabel} % Add the introduction to the table of contents
-	\thispagestyle{plain}%
-	\pagenumbering{arabic}
-
 	\chapter*{\introductionlabel}%
 }%
 
@@ -543,7 +550,7 @@ pdfcomment
 \justification true
 \use_refstyle 1
 \use_minted 0
-\index Lista de Acrónimos
+\index Lista de Equações
 \shortcut idx
 \color #008000
 \end_index
@@ -770,7 +777,7 @@ status open
 
 
 \backslash
-pagestyle{thesis}
+pagestyle{plain}
 \end_layout
 
 \end_inset
@@ -814,6 +821,23 @@ Apartir daqui poderá eliminar os respetibos indices caso não pretenda que
 \end_layout
 
 \begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+checktoopen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
 
@@ -823,6 +847,7 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset ERT
 status open
 
@@ -851,6 +876,24 @@ Adiciona o índice aos bookmarks do pdf
 \end_layout
 
 \begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+checktoopen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
 \begin_inset FloatList figure
 
 \end_inset
@@ -859,6 +902,24 @@ Adiciona o índice aos bookmarks do pdf
 \end_layout
 
 \begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+checktoopen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
 \begin_inset FloatList table
 
 \end_inset
@@ -867,6 +928,41 @@ Adiciona o índice aos bookmarks do pdf
 \end_layout
 
 \begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+checktoopen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+listofmyequations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
 \begin_inset FloatList algorithm
 
 \end_inset
@@ -875,6 +971,7 @@ Adiciona o índice aos bookmarks do pdf
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset CommandInset nomencl_print
 LatexCommand printnomenclature
 set_width "auto"
@@ -917,16 +1014,6 @@ Deverá certificar-se que ao selecionar o documento, este apareça como entrada(
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "chapters/introduction/introduction.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Note Note
 status open
 
@@ -950,6 +1037,16 @@ pagestyle{thesis}
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "chapters/introduction/introduction.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -958,6 +1055,13 @@ status open
 
 \backslash
 pagestyle{thesis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{arabic}
 \end_layout
 
 \end_inset

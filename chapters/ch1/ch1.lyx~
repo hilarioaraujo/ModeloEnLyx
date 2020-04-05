@@ -26,7 +26,7 @@
 \graphics default
 \default_output_format default
 \output_sync 0
-\bibtex_command default
+\bibtex_command bibtex
 \index_command default
 \float_placement h
 \paperfontsize default
@@ -46,7 +46,7 @@
 \use_package undertilde 1
 \cite_engine natbib
 \cite_engine_type authoryear
-\biblio_style plain
+\biblio_style plainnat
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -110,6 +110,54 @@ etc...
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+X=20\label{eq:Equação da onda}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+myequations{Equação da onda}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+c=10\label{eq:Equação da volta ao mundo}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+myequations{Cposas2}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Aos capítulos e subcapítulos devem ser dados títulos, em letra destacada
  em negrito, de corpo sucessivamente 14, 13 e 12, sempre encostados à margem
  esquerda da página sem qualquer avanço.
@@ -151,6 +199,18 @@ dasdasdasdasd asd asdasd asd asd asd
 
 \series bold
 Exemplo de numenclatura:
+\series default
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:SoFi"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -168,7 +228,7 @@ O
 LatexCommand nomenclature
 prefix "S"
 symbol "$P$"
-description "power \\nomunit{[\\si{\\watt} (\\si{\\joule\\per\\second})]}"
+description "power \\nomunit{\\si{\\watt} (\\si{\\joule\\per\\second})}"
 literal "true"
 
 \end_inset
@@ -186,7 +246,7 @@ O
 LatexCommand nomenclature
 prefix "S"
 symbol "$\\omega$"
-description "angular frequency \\nomunit{[\\si{\\radian}]}"
+description "angular frequency \\nomunit{\\si{\\radian}}"
 literal "true"
 
 \end_inset

@@ -26,7 +26,7 @@
 \graphics default
 \default_output_format default
 \output_sync 0
-\bibtex_command default
+\bibtex_command bibtex
 \index_command default
 \float_placement h
 \paperfontsize default
@@ -44,9 +44,9 @@
 \use_package stackrel 1
 \use_package stmaryrd 1
 \use_package undertilde 1
-\cite_engine basic
-\cite_engine_type default
-\biblio_style plain
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -131,6 +131,17 @@ Feita, contudo, esta apresentação do assunto, expondo a problemática subjacen
 Este capítulo não tem numeração específica e deve iniciar-se ao cimo de
  uma página ímpar (à direita), independentemente do facto da página anterior
  ser deixada com verso em branco.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+X=20\label{eq:Equação do volume}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

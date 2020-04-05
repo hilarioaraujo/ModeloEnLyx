@@ -10,13 +10,12 @@
 %	REQUIRED PACKAGES
 %----------------------------------------------------------------------------------------
 \usepackage{eurosym}
-\usepackage{tocloft}
 \usepackage{titling}
 \usepackage{eso-pic}
 
 \usepackage{etoolbox}
 \usepackage{xparse}
-
+\usepackage{hyphenat}
 \usepackage{ifthen}
 
 \usepackage{babel} % Required for automatically changing names of document elements to languages besides english
@@ -49,7 +48,7 @@
 
 
 %\RequirePackage[utf8]{inputenc} % Required for inputting portuguese characters
-%\RequirePackage[T1]{fontenc} % Output font encoding for portuguese characters
+\RequirePackage[T1]{fontenc} % Output font encoding for portuguese characters
 
 \usepackage[centerlast,small,sc]{caption} % Required for customising the captions
 \setlength{\captionmargin}{50pt}
@@ -92,6 +91,8 @@
 % we use this for our refernces as well
 \usepackage{xstring}
 
+\let\oldequation = \equation
+\let\endoldequation = \endequation
 \AtBeginDocument{\let\oldlabel = \label}% \AtBeginDocument because hyperref redefines \label
 \newcommand{\mynewlabel}[1]{%
   \StrBehind{#1}{eq:}[\Str]% remove "eq:" from labels
@@ -100,8 +101,6 @@
   \oldequation
   \let\label\mynewlabel
 }{\endoldequation}
-
-\usepackage{amsmath}
         
 \usepackage{tocloft}
 \newcommand{\listequationsname}{List of Equations}
@@ -109,7 +108,6 @@
 \newcommand{\myequations}[1]{%
 \addcontentsline{equ}{myequations}{\protect\numberline{\theequation}#1}}
 \setlength{\cftmyequationsnumwidth}{3em}
-
 
 %----------------------------------------------------------------------------------------
 %	CLASS OPTIONS
