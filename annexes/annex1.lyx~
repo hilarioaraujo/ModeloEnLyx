@@ -5,10 +5,6 @@
 \save_transient_properties true
 \origin unavailable
 \textclass book
-\begin_preamble
-\RequirePackage[utf8]{inputenc} % Required for inputting portuguese characters
-\RequirePackage[T1]{fontenc} % Output font encoding for portuguese characters
-\end_preamble
 \use_default_options false
 \maintain_unincluded_children false
 \language portuguese

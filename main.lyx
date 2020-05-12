@@ -441,10 +441,17 @@ KOMA-script documentation for details.}]{fancyhdr}
 %----------------------------------------------------------------------------------------
 %	APPENDICES AND ANNEX DESIGN
 %----------------------------------------------------------------------------------------
-\RequirePackage{etoolbox}
-\RequirePackage{appendix}
+\usepackage{etoolbox}
+\usepackage{appendix}
+\usepackage{titlesec}
+\newcommand{\appendixheadreset}{
+\titleformat{\chapter}[block]{\center\normalfont\Large\bfseries}{\chaptertitlename\ \thechapter\ -\ }{0em}{}
+\titlespacing*{\chapter}{0pt}{-50pt}{1cm}
+}
+
 
 \newcommand{\appendixfile}[1]{%
+	\appendixheadreset
 	\listgadd{\enStyle@appendix@list}{#1}%
 }
 

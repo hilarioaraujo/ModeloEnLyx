@@ -89,6 +89,7 @@
 %	List of Equation
 %----------------------------------------------------------------------------------------
 
+\usepackage{tocloft}
 \newcommand{\listequationsname}{List of Equations}
 \newlistof{myequations}{equ}{\listequationsname}
 \newcommand{\myequations}[1]{%
