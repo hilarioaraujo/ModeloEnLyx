@@ -83,15 +83,13 @@
 status open
 
 \begin_layout Plain Layout
-Páginas iniciais, isto é antes do corpo
+Páginas iniciais, isto é antes, aqui poderá configurar as páginas desde
+ a contra capa até aos indices.
 \end_layout
 
 \begin_layout Plain Layout
-s
-\end_layout
-
-\begin_layout Plain Layout
-s
+Caso não pretenda ter epígrafe, basta eliminar o código desde a nota com
+ o título epigrafe até ao inicio da nota com o título dedicatória.
 \end_layout
 
 \end_inset

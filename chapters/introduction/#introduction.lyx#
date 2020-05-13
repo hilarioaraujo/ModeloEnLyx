@@ -96,10 +96,6 @@ Introdução
 
 \end_layout
 
-\begin_layout Chapter*
-Introdução
-\end_layout
-
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -130,9 +126,6 @@ pagenumbering{arabic}
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset Note Note
 status open
 
@@ -147,6 +140,10 @@ Escreve apartit daqui a Introdução
 \end_inset
 
 
+\end_layout
+
+\begin_layout Chapter*
+Introdução
 \end_layout
 
 \begin_layout Standard

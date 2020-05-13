@@ -134,17 +134,6 @@ Este capítulo não tem numeração específica e deve iniciar-se ao cimo de
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-X=20\label{eq:Equação do volume}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false

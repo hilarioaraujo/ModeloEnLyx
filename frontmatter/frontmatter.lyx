@@ -533,6 +533,28 @@ file{main.tex}  e alterar para a língua desejada ('english' ou 'portuguese').
 \end_layout
 
 \begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+Papers written in the English language must include an extended abstract
+ of about 1000 words, or two pages.
+\end_layout
+
+\begin_layout Standard
+If the paper is written in Portuguese, this summary is in English, with
+ about 200 words or one page.
+\end_layout
+
+\begin_layout Standard
+To change the language, just go to the document settings in the file 
+\backslash
+ file {main.tex} and change the language used ('english' or 'portuguese').
+ This causes the headings included in the model to be translated into the
+ subjective language.
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 

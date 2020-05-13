@@ -96,6 +96,10 @@ Introdução
 
 \end_layout
 
+\begin_layout Chapter*
+Introdução
+\end_layout
+
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -104,7 +108,23 @@ status open
 
 
 \backslash
-introduction
+addchaptertocentry{
+\backslash
+introductionlabel} % Add the introduction to the table of contents
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagestyle{thesis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{arabic}
 \end_layout
 
 \end_inset

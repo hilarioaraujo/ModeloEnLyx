@@ -9,6 +9,7 @@
 %----------------------------------------------------------------------------------------
 %	REQUIRED PACKAGES
 %----------------------------------------------------------------------------------------
+
 \usepackage{eurosym}
 \usepackage{titling}
 \usepackage{eso-pic}
@@ -58,7 +59,8 @@
 %	FootNotes
 %----------------------------------------------------------------------------------------
 \usepackage{footnotebackref}
-
+\usepackage[bottom]{footmisc}
+\counterwithout*{footnote}{chapter} % don't use footnote reset per chapter
 
 %----------------------------------------------------------------------------------------
 %	List Abreviations, Symbols and Acronims
@@ -410,14 +412,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 %	INTRODUCTION PAGE DESIGN
 %----------------------------------------------------------------------------------------
 \newcommand{\introductionlabel}{Introduction}
-\newenvironment{introduction}{
-	\tttypeout{\introductionlabel}%
 	\addchaptertocentry{\introductionlabel} % Add the introduction to the table of contents
-	\chapter*{\introductionlabel}%
-}%
-
-
-
 
 %----------------------------------------------------------------------------------------
 
@@ -441,10 +436,17 @@ KOMA-script documentation for details.}]{fancyhdr}
 %----------------------------------------------------------------------------------------
 %	APPENDICES AND ANNEX DESIGN
 %----------------------------------------------------------------------------------------
-\RequirePackage{etoolbox}
-\RequirePackage{appendix}
+\usepackage{etoolbox}
+\usepackage{appendix}
+\usepackage{titlesec}
+\newcommand{\appendixheadreset}{
+\titleformat{\chapter}[block]{\normalfont\Large\bfseries}{\chaptertitlename\ \thechapter\ -\ }{0em}{}
+\titlespacing*{\chapter}{0pt}{-50pt}{1cm}
+}
+
 
 \newcommand{\appendixfile}[1]{%
+	\appendixheadreset
 	\listgadd{\enStyle@appendix@list}{#1}%
 }
 
@@ -510,7 +512,7 @@ pdfcomment
 \use_microtype false
 \use_dash_ligatures true
 \graphics default
-\default_output_format pdf2
+\default_output_format default
 \output_sync 1
 \output_sync_macro "\usepackage[active]{srcltx}"
 \bibtex_command bibtex
@@ -528,7 +530,6 @@ pdfcomment
 \pdf_colorlinks false
 \pdf_backref false
 \pdf_pdfusetitle false
-\pdf_quoted_options "hyperfootnotes=false"
 \papersize a4paper
 \use_geometry true
 \use_package amsmath 1
@@ -894,7 +895,6 @@ checktoopen
 \end_layout
 
 \begin_layout Standard
-\align center
 \begin_inset FloatList figure
 
 \end_inset
@@ -920,7 +920,6 @@ checktoopen
 \end_layout
 
 \begin_layout Standard
-\align center
 \begin_inset FloatList table
 
 \end_inset
@@ -946,7 +945,6 @@ checktoopen
 \end_layout
 
 \begin_layout Standard
-\align center
 \begin_inset ERT
 status open
 
@@ -963,7 +961,6 @@ listofmyequations
 \end_layout
 
 \begin_layout Standard
-\align center
 \begin_inset FloatList algorithm
 
 \end_inset
@@ -972,7 +969,6 @@ listofmyequations
 \end_layout
 
 \begin_layout Standard
-\align center
 \begin_inset CommandInset nomencl_print
 LatexCommand printnomenclature
 set_width "auto"
@@ -1041,29 +1037,6 @@ pagestyle{thesis}
 \begin_inset CommandInset include
 LatexCommand input
 filename "chapters/introduction/introduction.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pagestyle{thesis}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-pagenumbering{arabic}
-\end_layout
 
 \end_inset
 
