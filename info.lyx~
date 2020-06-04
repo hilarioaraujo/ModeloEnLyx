@@ -151,7 +151,7 @@ status open
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 thesissubtitle{Subtítulo da Dissertação de Mestrado}
 \end_layout
@@ -465,7 +465,11 @@ status open
 
 
 \backslash
-thesisdate{Escola Naval, 
+thesisdate{Alfeite 
+\backslash
+
+\backslash
+ 
 \backslash
 today}
 \end_layout

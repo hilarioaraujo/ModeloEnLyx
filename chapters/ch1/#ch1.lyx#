@@ -164,30 +164,16 @@ Aos capítulos e subcapítulos devem ser dados títulos, em letra destacada
 \end_layout
 
 \begin_layout Standard
-Não é possível apresentar um critério único para o ordenamento de capítulos
- e subcapítulos, decorrendo esta estrutura da natureza do próprio trabalho,
- variando consoante a área disciplinar ou científica do mesmo e das suas
- características próprias.
- Nalguns casos terá uma natureza explicativa, noutros passará pela exposição
- de resultados e sua interpretação, envolvendo a apresentação de critérios,
- tabelas de resultados, memória descritiva, etc.
-\end_layout
-
-\begin_layout Standard
-Cada um dos capítulos deve começar ao cimo de uma página ímpar (à direita).
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Reference1"
-literal "false"
-
-\end_inset
-
-
-\begin_inset Foot
+\begin_inset Float table
+wide false
+sideways false
 status open
 
 \begin_layout Plain Layout
-dasdasdasdasd asd asdasd asd asd asd
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+dadas
 \end_layout
 
 \end_inset
@@ -195,140 +181,37 @@ dasdasdasdasd asd asdasd asd asd asd
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
 
-\series bold
-Exemplo de numenclatura:
-\series default
+\begin_layout Plain Layout
 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:SoFi"
-plural "false"
-caps "false"
-noprefix "false"
+
+\backslash
+resizebox{0.8
+\backslash
+linewidth}{
+\end_layout
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Enumerate
-Simbolos:
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-O 
-\begin_inset Formula $P$
-\end_inset
-
- reprentao o símbolo de potência.
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-prefix "S"
-symbol "$P$"
-description "power \\nomunit{\\si{\\watt} (\\si{\\joule\\per\\second})}"
-literal "true"
-
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Enumerate
-O 
-\begin_inset Formula $\omega$
-\end_inset
-
- representa a frequência angular.
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-prefix "S"
-symbol "$\\omega$"
-description "angular frequency \\nomunit{\\si{\\radian}}"
-literal "true"
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Abreviaturas:
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-O 
-\shape italic
-Soft Robotic Fich
-\shape default
- (SoFi)
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-prefix "A"
-symbol "SoFi"
-description "\\textit{Soft Robotic Fish}"
-literal "true"
-
-\end_inset
-
- é um BUV desenvolvido pelo MIT como se poderá ver pela figura 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:SoFi"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Acrónimos:
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-O 
-\shape italic
-Biomimetic Underwater Vehicle
-\shape default
- (BUV)
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-prefix "C"
-symbol "BUV"
-description "\\textit{Biomimetic Underwater Vehicle}"
-literal "true"
-
-\end_inset
-
- é...
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="5">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="20text%">
-<column alignment="center" valignment="top" width="20text%">
-<column alignment="center" valignment="top" width="20page%">
-<column alignment="center" valignment="top" width="20page%">
-<column alignment="center" valignment="top" width="20page%">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -343,7 +226,7 @@ literal "true"
 \begin_inset Text
 
 \begin_layout Plain Layout
-20
+
 \end_layout
 
 \end_inset
@@ -566,6 +449,186 @@ literal "true"
 </row>
 </lyxtabular>
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Não é possível apresentar um critério único para o ordenamento de capítulos
+ e subcapítulos, decorrendo esta estrutura da natureza do próprio trabalho,
+ variando consoante a área disciplinar ou científica do mesmo e das suas
+ características próprias.
+ Nalguns casos terá uma natureza explicativa, noutros passará pela exposição
+ de resultados e sua interpretação, envolvendo a apresentação de critérios,
+ tabelas de resultados, memória descritiva, etc.
+\end_layout
+
+\begin_layout Standard
+Cada um dos capítulos deve começar ao cimo de uma página ímpar (à direita).
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Reference1"
+literal "false"
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+dasdasdasdasd asd asdasd asd asd asd
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Exemplo de numenclatura:
+\series default
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:SoFi"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Simbolos:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+O 
+\begin_inset Formula $P$
+\end_inset
+
+ reprentao o símbolo de potência.
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "$P$"
+description "power \\nomunit{\\si{\\watt} (\\si{\\joule\\per\\second})}"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+O 
+\begin_inset Formula $\omega$
+\end_inset
+
+ representa a frequência angular.
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "$\\omega$"
+description "angular frequency \\nomunit{\\si{\\radian}}"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Abreviaturas:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+O 
+\shape italic
+Soft Robotic Fich
+\shape default
+ (SoFi)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "SoFi"
+description "\\textit{Soft Robotic Fish}"
+literal "true"
+
+\end_inset
+
+ é um BUV desenvolvido pelo MIT como se poderá ver pela figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:SoFi"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Acrónimos:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+O 
+\shape italic
+Biomimetic Underwater Vehicle
+\shape default
+ (BUV)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "C"
+symbol "BUV"
+description "\\textit{Biomimetic Underwater Vehicle}"
+literal "true"
+
+\end_inset
+
+ é...
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
 \end_inset
 
 

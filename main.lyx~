@@ -412,7 +412,6 @@ KOMA-script documentation for details.}]{fancyhdr}
 %	INTRODUCTION PAGE DESIGN
 %----------------------------------------------------------------------------------------
 \newcommand{\introductionlabel}{Introduction}
-	\addchaptertocentry{\introductionlabel} % Add the introduction to the table of contents
 
 %----------------------------------------------------------------------------------------
 
