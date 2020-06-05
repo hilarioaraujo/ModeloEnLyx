@@ -215,7 +215,7 @@ vspace{1cm}
 
 	{
 \backslash
-Large 
+large 
 \backslash
 bfseries 
 \backslash
@@ -265,7 +265,7 @@ vspace{1.5cm}
 
 	{
 \backslash
-large 
+normalfont 
 \backslash
 bfseries 
 \backslash
@@ -296,7 +296,7 @@ end{center}
 
 {
 \backslash
-large 
+normalfont 
 \backslash
 bfseries 
 \backslash
@@ -321,7 +321,7 @@ cosupname {
 \backslash
 indent 
 \backslash
-large 
+normalfont 
 \backslash
 bfseries 
 \backslash
