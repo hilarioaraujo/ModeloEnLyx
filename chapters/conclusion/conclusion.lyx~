@@ -26,7 +26,7 @@
 \graphics default
 \default_output_format default
 \output_sync 0
-\bibtex_command default
+\bibtex_command bibtex
 \index_command default
 \float_placement h
 \paperfontsize default
@@ -46,7 +46,7 @@
 \use_package undertilde 1
 \cite_engine natbib
 \cite_engine_type authoryear
-\biblio_style plain
+\biblio_style plainnat
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait

@@ -107,6 +107,13 @@ status open
 conclusion
 \end_layout
 
+\begin_layout Plain Layout
+
+
+\backslash
+pagestyle{plain}
+\end_layout
+
 \end_inset
 
 

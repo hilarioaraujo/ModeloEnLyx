@@ -117,7 +117,7 @@ introductionlabel} % Add the introduction to the table of contents
 
 
 \backslash
-pagestyle{thesis}
+pagestyle{plain}
 \end_layout
 
 \begin_layout Plain Layout

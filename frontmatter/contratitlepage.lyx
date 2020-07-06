@@ -219,7 +219,9 @@ large
 \backslash
 bfseries 
 \backslash
-ttitle} 
+textit{
+\backslash
+ttitle}} 
 \backslash
 
 \backslash
@@ -245,7 +247,9 @@ large
 \backslash
 bfseries 
 \backslash
-tsubtitle} 
+textit{
+\backslash
+tsubtitle}} 
 \backslash
 
 \backslash
