@@ -471,7 +471,9 @@ thesisdate{Alfeite
 \backslash
  
 \backslash
-today}
+the
+\backslash
+year{}}
 \end_layout
 
 \end_inset
@@ -484,7 +486,9 @@ status open
 data da impressão da tese, pode referenciar a data ao longa da dissertação
  utilizando o comando (
 \backslash
-tdate)
+tdate) %
+\backslash
+today
 \end_layout
 
 \end_inset

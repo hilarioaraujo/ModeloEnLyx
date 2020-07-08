@@ -197,11 +197,11 @@ Large
 \backslash
 bfseries 
 \backslash
-authorname} 
+authorname 
 \backslash
 
 \backslash
-     	     	
+}     	     	
 \end_layout
 
 \begin_layout Plain Layout
@@ -215,24 +215,24 @@ vspace{1cm}
 
 	{
 \backslash
-large 
+Large 
 \backslash
 bfseries 
 \backslash
 textit{
 \backslash
-ttitle}} 
+ttitle} 
 \backslash
 
 \backslash
- % Thesis title     	
+}  % Thesis title     	
 \end_layout
 
 \begin_layout Plain Layout
 
 	
 \backslash
-vspace{1.5cm}     	
+vspace{1cm}     	
 \end_layout
 
 \begin_layout Plain Layout
@@ -241,7 +241,12 @@ vspace{1.5cm}
 \backslash
 ifdefined
 \backslash
-tsubtitle {
+tsubtitle 
+\end_layout
+
+\begin_layout Plain Layout
+
+		{
 \backslash
 large 
 \backslash
@@ -249,20 +254,20 @@ bfseries
 \backslash
 textit{
 \backslash
-tsubtitle}} 
+tsubtitle} 
 \backslash
 
 \backslash
  
 \backslash
-fi % Thesis sub title, if exists
+vspace{1cm}} % Thesis sub title, if exists
 \end_layout
 
 \begin_layout Plain Layout
 
 	
 \backslash
-vspace{1.5cm}     	
+fi
 \end_layout
 
 \begin_layout Plain Layout
@@ -313,11 +318,16 @@ supname}
 
 \begin_layout Plain Layout
 
-{
+
 \backslash
 ifdefined
 \backslash
-cosupname {
+cosupname 
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
 \backslash
 
 \backslash
@@ -333,7 +343,18 @@ coorientationlabel
 \backslash
 mdseries 
 \backslash
-cosupname}}
+cosupname}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fi
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout

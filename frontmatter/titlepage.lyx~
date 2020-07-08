@@ -217,24 +217,26 @@ vspace{1.5cm}
 \backslash
 ifdefined
 \backslash
-@tsubtitle 
+tsubtitle {
 \backslash
 large 
 \backslash
 bfseries 
 \backslash
-tsubtitle 
+tsubtitle}
 \backslash
 
 \backslash
-	
+ 
+\backslash
+fi 
 \end_layout
 
 \begin_layout Plain Layout
 
 	
 \backslash
-vfill	
+vspace{1.5cm}     	
 \end_layout
 
 \begin_layout Plain Layout
