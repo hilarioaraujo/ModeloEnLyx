@@ -514,7 +514,7 @@ pdfcomment
 \default_output_format default
 \output_sync 1
 \output_sync_macro "\usepackage[active]{srcltx}"
-\bibtex_command bibtex
+\bibtex_command biber
 \index_command default
 \float_placement h
 \paperfontsize 12
@@ -541,9 +541,12 @@ pdfcomment
 \use_package stackrel 1
 \use_package stmaryrd 1
 \use_package undertilde 1
-\cite_engine natbib
+\cite_engine biblatex
 \cite_engine_type authoryear
 \biblio_style plainnat
+\biblio_options uniquename=false, maxcitenames=3
+\biblatex_bibstyle apa
+\biblatex_citestyle apa
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait

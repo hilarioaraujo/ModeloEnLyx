@@ -462,6 +462,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 
 
 \newcommand{\annexfile}[1]{%
+	\appendixheadreset
 	\listgadd{\enStyle@annex@list}{#1}%
 }
 
